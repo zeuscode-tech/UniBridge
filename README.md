@@ -46,6 +46,7 @@ The stack and MVP scope may change after user discovery. No production systems o
 
 ## Documentation
 
+- [Web prototype](web/README.md) — clickable web prototype built from the Figma designs (content not yet verified)
 - [Project brief](docs/PROJECT_BRIEF.md)
 - [Research plan](docs/RESEARCH_PLAN.md)
 - [MVP scope](docs/MVP_SCOPE.md)
