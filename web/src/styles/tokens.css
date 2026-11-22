@@ -1,0 +1,78 @@
+/* Design tokens — UniBridge Design Manifest v2.0, §2.2 / §3 / §30.4 */
+:root {
+  /* Brand */
+  --blue: #2563eb;
+  --blue-hover: #1d4ed8;
+  --blue-50: #eff4ff;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --navy: #0b1f3b;
+  --navy-2: #102744;
+  --navy-3: #173453;
+  --teal: #0f766e;
+  --teal-bright: #14b8a6;
+  --teal-50: #edfbf8;
+  --indigo: #3730a3;
+
+  /* Neutrals */
+  --bg: #f7f9fc;
+  --surface: #ffffff;
+  --surface-alt: #eff4ff;
+  --text: #111827;
+  --text-2: #475569;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+
+  /* Feedback */
+  --success: #166534;
+  --success-bg: #ecfdf3;
+  --warning: #92400e;
+  --warning-bg: #fff7ed;
+  --warning-border: #fed7aa;
+  --error: #b91c1c;
+  --error-bg: #fef2f2;
+
+  /* Type */
+  --font-display: 'Manrope Variable', 'Noto Sans KR', system-ui, sans-serif;
+  --font-body: 'Inter Variable', 'Noto Sans KR', system-ui, sans-serif;
+  --font-ko: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+
+  /* Radius */
+  --r-sm: 8px;
+  --r-ctl: 12px;
+  --r-card: 16px;
+  --r-modal: 20px;
+  --r-hero: 24px;
+  --r-pill: 999px;
+
+  /* Elevation */
+  --sh-1: 0 4px 16px rgba(15, 23, 42, 0.04);
+  --sh-2: 0 12px 30px rgba(15, 23, 42, 0.08);
+  --sh-3: 0 24px 60px rgba(11, 31, 59, 0.14);
+  --ring: 0 0 0 3px rgba(37, 99, 235, 0.35);
+
+  /* Motion */
+  --t-fast: 140ms;
+  --t-hover: 180ms;
+  --t-card: 260ms;
+  --t-image: 320ms;
+  --t-reveal: 480ms;
+  --t-progress: 420ms;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-reveal: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout */
+  --container: 1200px;
+  --gutter: 24px;
+  --header-h: 76px;
+  --bottom-nav-h: 0px;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --gutter: 16px;
+    --header-h: 64px;
+    --bottom-nav-h: calc(60px + env(safe-area-inset-bottom, 0px));
+  }
+}
