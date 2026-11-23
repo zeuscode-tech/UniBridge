@@ -14,13 +14,13 @@
 .logo__word {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 21px;
+  font-size: var(--fs-lg);
   letter-spacing: -0.03em;
   color: var(--navy);
 }
 .logo--inverse .logo__mark {
   background: #fff;
-  border-radius: 8px;
+  border-radius: var(--r-ctl);
   padding: 3px;
 }
 .logo--inverse .logo__word {
@@ -39,7 +39,7 @@
   border-radius: var(--r-ctl);
   border: 1px solid transparent;
   font-weight: 600;
-  font-size: 15px;
+  font-size: var(--fs-md);
   line-height: 1;
   white-space: nowrap;
   transition:
@@ -58,12 +58,12 @@
 .btn--sm {
   --h: 40px;
   padding-inline: 14px;
-  font-size: 14px;
+  font-size: var(--fs-sm);
 }
 .btn--lg {
   --h: 54px;
   padding-inline: 24px;
-  font-size: 16px;
+  font-size: var(--fs-md);
 }
 .btn--block {
   width: 100%;
@@ -71,7 +71,6 @@
 .btn--primary {
   background: var(--blue);
   color: #fff;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 6px 16px -6px rgba(37, 99, 235, 0.55);
 }
 .btn--primary:hover {
   background: var(--blue-hover);
@@ -103,12 +102,12 @@
   color: #fff;
 }
 .btn--danger:hover {
-  background: #991b1b;
+  background: var(--error-hover);
 }
 .btn--danger-ghost {
   background: transparent;
   color: var(--error);
-  border-color: #fecaca;
+  border-color: var(--error-border);
   margin-top: 14px;
 }
 .btn--danger-ghost:hover {
@@ -144,7 +143,7 @@
   gap: 6px;
   color: var(--blue);
   font-weight: 600;
-  font-size: 15px;
+  font-size: var(--fs-md);
   text-underline-offset: 3px;
   text-decoration-thickness: 1.5px;
 }
@@ -152,7 +151,7 @@
   text-decoration: underline;
 }
 .link--sm {
-  font-size: 13.5px;
+  font-size: var(--fs-sm);
 }
 .link--arrow svg {
   transition: transform var(--t-hover) var(--ease);
@@ -169,7 +168,7 @@
   gap: 6px;
   color: var(--text-2);
   font-weight: 500;
-  font-size: 14px;
+  font-size: var(--fs-sm);
   padding: 6px 0;
 }
 .back-link:hover {
@@ -194,9 +193,9 @@
   border-radius: var(--r-pill);
   background: var(--navy);
   color: #fff;
-  font-size: 12px;
+  font-size: var(--fs-xs);
   font-weight: 650;
-  letter-spacing: 0.04em;
+  letter-spacing: 0;
   white-space: nowrap;
 }
 .tag--soft {
@@ -215,7 +214,7 @@
   background: #fff;
   border: 1px solid var(--border);
   box-shadow: var(--sh-1);
-  font-size: 13.5px;
+  font-size: var(--fs-sm);
   font-weight: 600;
   color: var(--navy);
 }
@@ -224,7 +223,7 @@
   height: 8px;
   border-radius: 50%;
   background: var(--teal-bright);
-  box-shadow: 0 0 0 4px rgba(20, 184, 166, 0.18);
+  box-shadow: 0 0 0 4px rgba(31, 60, 136, 0.18);
 }
 
 .chips,
@@ -248,7 +247,7 @@
   border-radius: var(--r-pill);
   background: #fff;
   border: 1px solid var(--border-strong);
-  font-size: 14px;
+  font-size: var(--fs-sm);
   font-weight: 550;
   color: var(--navy);
   transition: all var(--t-hover) ease-out;
@@ -262,7 +261,7 @@
   color: #fff;
 }
 .chip__n {
-  font-size: 12px;
+  font-size: var(--fs-xs);
   font-variant-numeric: tabular-nums;
   opacity: 0.6;
 }
@@ -276,7 +275,7 @@
   padding-inline: 12px;
   border-radius: var(--r-pill);
   border: 1px solid var(--border);
-  font-size: 13.5px;
+  font-size: var(--fs-sm);
   font-weight: 600;
   color: var(--navy);
   background: #fff;
@@ -301,7 +300,7 @@
   border-radius: var(--r-pill);
   background: var(--blue);
   color: #fff;
-  font-size: 12px;
+  font-size: var(--fs-xs);
 }
 
 /* ===================================================== Status badges */
@@ -309,7 +308,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 13px;
+  font-size: var(--fs-sm);
   font-weight: 600;
   white-space: nowrap;
 }
@@ -337,7 +336,7 @@
   background: var(--warning-bg);
 }
 .status--lg.status--unknown {
-  background: #f1f5f9;
+  background: var(--surface-alt);
 }
 
 /* ============================================================= Cards */
@@ -376,7 +375,7 @@
   background: var(--blue-50);
   border: 1px solid var(--blue-100);
   color: var(--navy-3);
-  font-size: 14px;
+  font-size: var(--fs-sm);
   line-height: 1.55;
   margin-bottom: 20px;
 }
@@ -388,7 +387,7 @@
 .notice--warn {
   background: var(--warning-bg);
   border-color: var(--warning-border);
-  color: #7c2d12;
+  color: var(--warning);
 }
 .notice--warn svg {
   color: var(--warning);
@@ -402,14 +401,14 @@
   border-radius: var(--r-ctl);
   border: 1px solid var(--border-strong);
   background: #fff;
-  font-size: 16px;
+  font-size: var(--fs-md);
   color: var(--text);
   transition:
     border-color var(--t-fast) ease-out,
     box-shadow var(--t-fast) ease-out;
 }
 .input:hover {
-  border-color: #94a3b8;
+  border-color: var(--on-dark-muted);
 }
 .input:focus {
   outline: none;
@@ -418,7 +417,7 @@
 }
 .input--sm {
   height: 40px;
-  font-size: 14px;
+  font-size: var(--fs-sm);
   padding-inline: 12px;
 }
 .input--area {
@@ -439,7 +438,7 @@ select.input {
   border-color: var(--error);
 }
 .input.is-invalid:focus {
-  box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.2);
+  box-shadow: 0 0 0 3px rgba(179, 38, 30, 0.2);
 }
 .field {
   display: flex;
@@ -450,7 +449,7 @@ select.input {
   align-items: center;
   gap: 6px;
   margin-top: 8px;
-  font-size: 13.5px;
+  font-size: var(--fs-sm);
   font-weight: 500;
   color: var(--error);
 }
@@ -480,7 +479,7 @@ select.input {
   border: 0;
   outline: 0;
   background: transparent;
-  font-size: 16px;
+  font-size: var(--fs-md);
   color: var(--text);
 }
 .search-field input::placeholder {
@@ -497,7 +496,7 @@ select.input {
   align-items: center;
   gap: 10px;
   min-height: 40px;
-  font-size: 15px;
+  font-size: var(--fs-md);
   color: var(--text);
   cursor: pointer;
 }
@@ -509,7 +508,7 @@ select.input {
 }
 .check__count {
   margin-left: auto;
-  font-size: 13px;
+  font-size: var(--fs-sm);
   color: var(--muted);
   font-variant-numeric: tabular-nums;
 }
@@ -530,7 +529,7 @@ select.input {
   border: 1px solid var(--border-strong);
   background: #fff;
   font-weight: 550;
-  font-size: 15px;
+  font-size: var(--fs-md);
   cursor: pointer;
   transition: all var(--t-hover) ease-out;
 }
@@ -570,16 +569,16 @@ select.input {
 .segmented {
   display: inline-flex;
   padding: 3px;
-  border-radius: 10px;
-  background: #f1f5f9;
+  border-radius: var(--r-ctl);
+  background: var(--surface-alt);
   border: 1px solid var(--border);
 }
 .segmented button {
   height: 30px;
   min-width: 38px;
   padding-inline: 8px;
-  border-radius: 7px;
-  font-size: 13px;
+  border-radius: var(--r-ctl);
+  font-size: var(--fs-sm);
   font-weight: 650;
   color: var(--muted);
   transition: all var(--t-hover) ease-out;
@@ -587,7 +586,7 @@ select.input {
 .segmented button[aria-pressed='true'] {
   background: #fff;
   color: var(--navy);
-  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.1);
+  box-shadow: 0 1px 2px rgba(14, 27, 51, 0.1);
 }
 
 .seg-tabs {
@@ -596,12 +595,12 @@ select.input {
   gap: 4px;
   padding: 4px;
   border-radius: var(--r-ctl);
-  background: #f1f5f9;
+  background: var(--surface-alt);
 }
 .seg-tabs button {
   min-height: 40px;
-  border-radius: 9px;
-  font-size: 14px;
+  border-radius: var(--r-ctl);
+  font-size: var(--fs-sm);
   font-weight: 600;
   color: var(--text-2);
   padding-inline: 6px;
@@ -609,7 +608,7 @@ select.input {
 .seg-tabs button.is-on {
   background: #fff;
   color: var(--navy);
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.12);
+  box-shadow: 0 1px 3px rgba(14, 27, 51, 0.12);
 }
 
 /* Direction switch: KG ⇄ KR */
@@ -624,8 +623,8 @@ select.input {
   border: 1px solid var(--blue-100);
   color: var(--blue-hover);
   font-weight: 700;
-  font-size: 13px;
-  letter-spacing: 0.06em;
+  font-size: var(--fs-sm);
+  letter-spacing: 0;
   transition: all var(--t-hover) ease-out;
 }
 .dirswitch:hover {
@@ -641,13 +640,43 @@ select.input {
 .dirswitch__code {
   animation: dir-in var(--t-hover) ease-out;
 }
-.dirswitch__code--to {
-  color: var(--navy);
+/* Echo of the bridge: each country code takes its own flag colour. */
+.dirswitch__code--kg {
+  color: var(--kg-ink); /* 7.0 on --primary-50 · 6.1 on --primary-100 (hover) */
+}
+.dirswitch__code--kr {
+  color: var(--primary-hover);
+}
+
+/* ================================================== Bridge mark (brand) */
+.bridge {
+  display: inline-grid;
+  place-items: center;
+  line-height: 0;
+}
+.bridge svg {
+  overflow: visible;
+}
+.bridge__deck {
+  stroke: var(--border-strong);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+.bridge__half {
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.bridge__half--kg {
+  stroke: var(--kg);
+}
+.bridge__half--kr {
+  stroke: var(--primary);
 }
 .dirswitch--lg {
   height: 48px;
   padding-inline: 18px;
-  font-size: 15px;
+  font-size: var(--fs-md);
 }
 @keyframes dir-in {
   from {
@@ -662,7 +691,7 @@ select.input {
   flex-wrap: wrap;
   align-items: center;
   gap: 4px;
-  font-size: 13.5px;
+  font-size: var(--fs-sm);
   color: var(--muted);
   margin-bottom: 20px;
 }
@@ -715,21 +744,21 @@ select.input {
   left: 12px;
   bottom: 12px;
   padding: 4px 9px;
-  border-radius: 6px;
-  background: rgba(11, 31, 59, 0.78);
+  border-radius: var(--r-ctl);
+  background: rgba(14, 27, 51, 0.78);
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   color: #fff;
-  font-size: 11px;
+  font-size: var(--fs-xs);
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0;
   pointer-events: none;
 }
 
 /* ============================================== Generated uni covers */
 .unicover {
-  --c1: var(--navy);
-  --c2: #1e3a8a;
+  --c1: var(--ink);
+  --c2: var(--primary-hover);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -755,16 +784,17 @@ select.input {
   z-index: -1;
 }
 .unicover--blue {
-  --c1: #1d4ed8;
-  --c2: #2563eb;
+  --c1: var(--primary-hover);
+  --c2: var(--primary);
 }
+/* KG accent: the red stays deep enough for white text (5.9:1 at its lightest). */
 .unicover--teal {
-  --c1: #0b3b45;
-  --c2: #0f766e;
+  --c1: #6e0a1a;
+  --c2: var(--kg);
 }
 .unicover--indigo {
-  --c1: #1e1b4b;
-  --c2: #3730a3;
+  --c1: var(--ink);
+  --c2: var(--ink-2);
 }
 .unicover__arc {
   position: absolute;
@@ -785,7 +815,7 @@ select.input {
 .unicover__mark {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(30px, 2.4rem, 42px);
+  font-size: var(--fs-3xl);
   line-height: 1;
   letter-spacing: -0.03em;
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
@@ -796,10 +826,9 @@ select.input {
   letter-spacing: -0.02em;
 }
 .unicover__meta {
-  font-size: 11.5px;
+  font-size: var(--fs-xs);
   font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0;
   opacity: 0.75;
   padding-bottom: 4px;
   text-align: right;
@@ -811,10 +840,10 @@ select.input {
   padding: clamp(20px, 3vw, 36px);
 }
 .unicover--hero .unicover__mark {
-  font-size: clamp(48px, 7vw, 96px);
+  font-size: var(--fs-4xl);
 }
 .unicover--hero .unicover__meta {
-  font-size: 13px;
+  font-size: var(--fs-sm);
 }
 
 /* =================================================== University card */
@@ -854,13 +883,13 @@ select.input {
   align-items: center;
   flex-wrap: wrap;
   gap: 6px;
-  font-size: 13px;
+  font-size: var(--fs-sm);
   color: var(--muted);
   margin-bottom: 8px;
 }
 .unicard__name {
   font-family: var(--font-display);
-  font-size: 19px;
+  font-size: var(--fs-lg);
   line-height: 1.3;
   letter-spacing: -0.015em;
   font-weight: 700;
@@ -871,7 +900,7 @@ select.input {
 }
 .unicard__local {
   margin-top: 4px;
-  font-size: 14px;
+  font-size: var(--fs-sm);
   color: var(--text-2);
 }
 .unicard__facts {
@@ -881,11 +910,11 @@ select.input {
   margin-top: 16px;
   padding-top: 14px;
   border-top: 1px dashed var(--border);
-  font-size: 13px;
+  font-size: var(--fs-sm);
 }
 .unicard__facts dt {
   color: var(--muted);
-  font-size: 12px;
+  font-size: var(--fs-xs);
   margin-bottom: 2px;
 }
 .unicard__facts dd {
@@ -932,7 +961,7 @@ select.input {
 .table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 15px;
+  font-size: var(--fs-md);
   margin-block: 16px;
 }
 .table-wrap .table {
@@ -957,7 +986,7 @@ select.input {
 }
 .table__hint {
   display: block;
-  font-size: 13px;
+  font-size: var(--fs-sm);
   color: var(--muted);
   margin-top: 2px;
 }
@@ -967,10 +996,9 @@ select.input {
 }
 .table--grid thead th {
   background: var(--bg);
-  font-size: 12.5px;
+  font-size: var(--fs-xs);
   font-weight: 650;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  letter-spacing: 0;
   color: var(--muted);
   white-space: nowrap;
 }
@@ -990,12 +1018,12 @@ select.input {
   border-top: 1px solid var(--border);
 }
 .kv dt {
-  font-size: 12px;
+  font-size: var(--fs-xs);
   color: var(--muted);
   margin-bottom: 2px;
 }
 .kv dd {
-  font-size: 14px;
+  font-size: var(--fs-sm);
   font-weight: 550;
   color: var(--navy);
 }
@@ -1015,7 +1043,7 @@ select.input {
   border-bottom: 1px solid var(--border);
 }
 .kv--rows dt {
-  font-size: 14px;
+  font-size: var(--fs-sm);
   margin: 0;
 }
 .kv--rows dd {
@@ -1040,7 +1068,7 @@ select.input {
   height: 48px;
   padding-inline: 14px;
   font-weight: 600;
-  font-size: 15px;
+  font-size: var(--fs-md);
   color: var(--muted);
   transition: color var(--t-fast) ease-out;
 }
@@ -1082,7 +1110,7 @@ select.input {
   inset: 0;
   z-index: 80;
   display: flex;
-  background: rgba(11, 31, 59, 0.42);
+  background: rgba(14, 27, 51, 0.42);
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   animation: fade 200ms ease-out;
@@ -1185,7 +1213,7 @@ select.input {
   place-items: center;
   width: 64px;
   height: 64px;
-  border-radius: 20px;
+  border-radius: var(--r-card);
   background: var(--blue-50);
   color: var(--blue);
   margin-bottom: 8px;
@@ -1248,11 +1276,11 @@ select.input {
   place-items: center;
   width: 28px;
   height: 28px;
-  border-radius: 8px;
+  border-radius: var(--r-ctl);
   background: var(--navy);
   color: #fff;
   font-weight: 700;
-  font-size: 13px;
+  font-size: var(--fs-sm);
   font-variant-numeric: tabular-nums;
 }
 
@@ -1266,14 +1294,14 @@ select.input {
   grid-template-columns: auto 1fr;
   column-gap: 8px;
   align-items: center;
-  font-size: 14px;
+  font-size: var(--fs-sm);
 }
 .sources li > svg {
   color: var(--muted);
 }
 .sources li > .muted {
   grid-column: 1 / -1;
-  font-size: 12.5px;
+  font-size: var(--fs-xs);
 }
 .sources li:has(> svg) > .muted {
   grid-column: 2;
@@ -1288,4 +1316,25 @@ select.input {
 }
 .sources a:hover {
   text-decoration: underline;
+}
+.unicard__affil {
+  margin-bottom: 6px;
+}
+
+/* WCAG 2.5.8: standalone links (breadcrumbs, external links outside running
+   text) keep at least a 24px-high target. */
+.crumbs a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  min-width: 24px;
+}
+a.link {
+  min-height: 24px;
+}
+.sources a,
+.lt-sources a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
 }

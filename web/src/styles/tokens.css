@@ -1,58 +1,110 @@
-/* Design tokens — UniBridge Design Manifest v2.0, §2.2 / §3 / §30.4 */
+/* Design tokens: "two flags, one bridge".
+   Contrast ratios (WCAG 2.2) are noted next to every text colour, measured
+   against the surface it is used on. Keep them when you change a value. */
 :root {
-  /* Brand */
-  --blue: #2563eb;
-  --blue-hover: #1d4ed8;
-  --blue-50: #eff4ff;
-  --blue-100: #dbeafe;
-  --blue-200: #bfdbfe;
-  --navy: #0b1f3b;
-  --navy-2: #102744;
-  --navy-3: #173453;
-  --teal: #0f766e;
-  --teal-bright: #14b8a6;
-  --teal-50: #edfbf8;
-  --indigo: #3730a3;
+  /* ---------------------------------------------------------------- Ink */
+  --ink: #0e1b33; /* 17.2 on #fff · 15.7 on --bg */
+  --ink-2: #1b2a4a; /* raised surface on dark bands */
 
-  /* Neutrals */
-  --bg: #f7f9fc;
+  /* ------------------------------------------------ KR: taegeuk blue */
+  --primary: #1f3c88; /* 10.2 on #fff · 9.3 on --bg · white on it 10.2 */
+  --primary-hover: #172d66; /* white on it 13.1 */
+  --primary-50: #eef2fa; /* tint; --primary on it 9.1, --muted 5.1 */
+  --primary-100: #dce4f4;
+  --primary-200: #b4c3e6;
+  --primary-300: #9db5f5; /* on --ink 8.5: links, focus and KR on dark */
+
+  /* ------------------------------------------------ KG: flag red */
+  --kg: #c8102e; /* 5.9 on #fff · 5.2 on --kg-50 · white on it 5.9 */
+  --kg-ink: #a50d26; /* 6.9 on --kg-50 */
+  --kg-50: #fcf0f2;
+  --kg-100: #f6d3d9;
+  --kg-300: #ff8a9a; /* on --ink 7.7 */
+
+  /* ------------------------------------------------ Sun gold (tiny) */
+  --gold: #e8a317; /* decorative only on light; 7.9 on --ink */
+  --gold-50: #fdf4df;
+
+  /* ------------------------------------------------ Mist neutrals */
+  --bg: #f3f5f9;
   --surface: #ffffff;
-  --surface-alt: #eff4ff;
-  --text: #111827;
-  --text-2: #475569;
-  --muted: #64748b;
-  --border: #e2e8f0;
-  --border-strong: #cbd5e1;
+  --surface-alt: #eaeef5;
+  --mist-2: #e9edf3; /* track of segmented controls; --muted on it 4.9 */
+  --text: var(--ink);
+  --text-2: #3b4862; /* 9.2 on #fff · 8.4 on --bg */
+  --muted: #5a6680; /* 5.8 on #fff · 5.3 on --bg · 5.0 on --surface-alt */
+  --border: #dde2ea; /* dividers, card outlines (decorative) */
+  --border-strong: #c3cad6;
+  --border-input: #7d879b; /* form control boundary: 3.6 on #fff, 3.3 on --bg */
 
-  /* Feedback */
-  --success: #166534;
-  --success-bg: #ecfdf3;
-  --warning: #92400e;
-  --warning-bg: #fff7ed;
-  --warning-border: #fed7aa;
-  --error: #b91c1c;
-  --error-bg: #fef2f2;
+  /* ------------------------------------------------ Feedback */
+  --success: #15703f; /* 6.1 on #fff · 5.5 on --success-bg */
+  --success-bg: #eaf5ee;
+  --warning: #8f4a00; /* 6.7 on #fff · 6.1 on --warning-bg */
+  --warning-bg: var(--gold-50);
+  --warning-border: #f0cb7a;
+  --error: #b3261e; /* 6.5 on #fff · 5.8 on --error-bg */
+  --error-bg: #fcedec;
+  --error-hover: #8c1d17; /* white on it 9.1 */
+  --error-border: #f2c4c1;
 
-  /* Type */
-  --font-display: 'Manrope Variable', 'Noto Sans KR', system-ui, sans-serif;
-  --font-body: 'Inter Variable', 'Noto Sans KR', system-ui, sans-serif;
-  --font-ko: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  /* ------------------------------------------------ Text on --ink bands */
+  --on-dark: #ffffff; /* 17.2 on --ink */
+  --on-dark-2: #c9d1e0; /* 11.2 on --ink */
+  --on-dark-muted: #a3aec4; /* 7.7 on --ink · 6.4 on --ink-2 */
 
-  /* Radius */
-  --r-sm: 8px;
-  --r-ctl: 12px;
+  /* Legacy names: kept so older selectors keep resolving. */
+  --blue: var(--primary);
+  --blue-hover: var(--primary-hover);
+  --blue-50: var(--primary-50);
+  --blue-100: var(--primary-100);
+  --blue-200: var(--primary-200);
+  --navy: var(--ink);
+  --navy-2: var(--ink-2);
+  --navy-3: var(--ink);
+  --teal: var(--primary);
+  --teal-bright: var(--gold);
+  --teal-50: var(--primary-50);
+  --indigo: var(--ink-2);
+
+  /* ---------------------------------------------------------- Type */
+  /* Pretendard carries Latin + Hangul; it has no Cyrillic, so Inter (same
+     skeleton, Pretendard is built on it) takes over for Russian/Kyrgyz. */
+  --font-body: 'Pretendard Variable', 'Inter Variable', -apple-system, BlinkMacSystemFont, system-ui,
+    'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  /* Unbounded: big headings only. No Hangul, so Korean drops to Pretendard. */
+  --font-display: 'Unbounded Variable', 'Pretendard Variable', 'Inter Variable', system-ui, sans-serif;
+  --font-ko: 'Pretendard Variable', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+
+  /* The whole scale: 8 steps. The top three are fluid. */
+  --fs-xs: 12px;
+  --fs-sm: 14px;
+  --fs-md: 16px;
+  --fs-lg: 19px;
+  --fs-xl: 24px;
+  --fs-2xl: clamp(24px, 1.1rem + 1.4vw, 32px);
+  --fs-3xl: clamp(32px, 1.5rem + 1.9vw, 44px);
+  --fs-4xl: clamp(32px, 1.2rem + 3.6vw, 60px);
+
+  /* ---------------------------------------------------------- Radius */
+  /* Three levels: control 10 · card 16 · band/hero 24. */
+  --r-sm: 10px; /* same as --r-ctl: the scale is 10 · 16 · 24 */
+  --r-ctl: 10px;
   --r-card: 16px;
-  --r-modal: 20px;
+  --r-modal: 24px;
   --r-hero: 24px;
   --r-pill: 999px;
 
-  /* Elevation */
-  --sh-1: 0 4px 16px rgba(15, 23, 42, 0.04);
-  --sh-2: 0 12px 30px rgba(15, 23, 42, 0.08);
-  --sh-3: 0 24px 60px rgba(11, 31, 59, 0.14);
-  --ring: 0 0 0 3px rgba(37, 99, 235, 0.35);
+  /* ---------------------------------------------------------- Elevation */
+  /* Only floating UI casts a shadow. Cards use a border. */
+  --sh-1: none;
+  --sh-2: none;
+  --sh-float: 0 2px 6px rgba(14, 27, 51, 0.06), 0 18px 40px -16px rgba(14, 27, 51, 0.28);
+  --sh-3: 0 24px 60px -12px rgba(14, 27, 51, 0.3);
+  /* 1px solid primary on top of the 1px border = a 2px 10:1 ring, plus a halo. */
+  --ring: 0 0 0 1px var(--primary), 0 0 0 4px rgba(31, 60, 136, 0.16);
 
-  /* Motion */
+  /* ---------------------------------------------------------- Motion */
   --t-fast: 140ms;
   --t-hover: 180ms;
   --t-card: 260ms;
@@ -62,10 +114,10 @@
   --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
   --ease-reveal: cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* Layout */
+  /* ---------------------------------------------------------- Layout */
   --container: 1200px;
   --gutter: 24px;
-  --header-h: 76px;
+  --header-h: 72px;
   --bottom-nav-h: 0px;
 }
 
