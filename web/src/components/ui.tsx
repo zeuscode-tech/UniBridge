@@ -21,9 +21,9 @@ export function Logo({ inverse = false }: { inverse?: boolean }) {
 export function StatusBadge({ status, compact = false }: { status: ContentStatus; compact?: boolean }) {
   const { tr } = usePrefs();
   const map = {
-    verified: { icon: ShieldCheck, label: tr('Verified', 'Проверено') },
-    needs_review: { icon: CircleDashed, label: tr('Not yet verified', 'Не проверено') },
-    unknown: { icon: CircleHelp, label: tr('No confirmed data', 'Нет подтверждённых данных') },
+    verified: { icon: ShieldCheck, label: tr('Verified', 'Проверено', '확인됨') },
+    needs_review: { icon: CircleDashed, label: tr('Not yet verified', 'Не проверено', '아직 확인 안 됨') },
+    unknown: { icon: CircleHelp, label: tr('No confirmed data', 'Нет подтверждённых данных', '확인된 정보 없음') },
   } as const;
   const { icon: Icon, label } = map[status];
   return (
@@ -50,7 +50,7 @@ export function ExternalLink({
     <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
       {children}
       <ArrowUpRight size={15} strokeWidth={2} aria-hidden="true" className="ext-icon" />
-      <span className="sr-only">{tr('(opens an external site)', '(откроется внешний сайт)')}</span>
+      <span className="sr-only">{tr('(opens an external site)', '(откроется внешний сайт)', '(외부 사이트가 열려요)')}</span>
     </a>
   );
 }
@@ -60,7 +60,7 @@ export function ExternalLink({
 export function Breadcrumbs({ items }: { items: { label: string; to?: string }[] }) {
   const { tr } = usePrefs();
   return (
-    <nav className="crumbs" aria-label={tr('Breadcrumb', 'Навигационная цепочка')}>
+    <nav className="crumbs" aria-label={tr('Breadcrumb', 'Навигационная цепочка', '현재 위치')}>
       <ol>
         {items.map((it, i) => (
           <li key={i}>
@@ -124,7 +124,7 @@ export function ConceptImage({
         decoding="async"
         style={position ? { objectPosition: position } : undefined}
       />
-      <figcaption className="concept__tag">{tr('Concept image', 'Концепт-изображение')}</figcaption>
+      <figcaption className="concept__tag">{tr('Concept image', 'Концепт-изображение', '콘셉트 이미지')}</figcaption>
     </figure>
   );
 }
@@ -136,16 +136,20 @@ export function ConceptImage({
  * Content is visible by default; the hidden state is only applied by JS,
  * and only to blocks that start below the fold.
  */
-export function Reveal({ children, delay = 0, as: Tag = 'div', className = '' }: {
+export function Reveal({ children, delay = 0, as: Tag = 'div', className = '', animate = false }: {
   children: ReactNode;
   delay?: number;
   as?: 'div' | 'section' | 'li';
   className?: string;
+  animate?: boolean;
 }) {
   const ref = useRef<HTMLElement | null>(null);
   const [state, setState] = useState<'idle' | 'armed' | 'shown'>('idle');
 
   useEffect(() => {
+    // Scroll reveals are off: they left cards blank during fast scrolling and in
+    // link previews. The hero keeps its own entrance; pass `animate` to opt back in.
+    if (!animate) return;
     const el = ref.current;
     if (!el || typeof IntersectionObserver === 'undefined') return;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -162,7 +166,7 @@ export function Reveal({ children, delay = 0, as: Tag = 'div', className = '' }:
     );
     io.observe(el);
     return () => io.disconnect();
-  }, []);
+  }, [animate]);
 
   return (
     <Tag
@@ -197,5 +201,24 @@ export function EmptyState({
       <p>{text}</p>
       {action}
     </div>
+  );
+}
+
+/**
+ * The brand mark of the product: a small arch from the home country (left) to
+ * the destination (right). Left half takes the home colour, right half the
+ * destination colour: KG flag red, KR taegeuk blue. Purely decorative.
+ */
+export function BridgeMark({ from, size = 'md' }: { from: 'KR' | 'KG'; size?: 'sm' | 'md' }) {
+  const to = from === 'KG' ? 'kr' : 'kg';
+  return (
+    <span className={`bridge bridge--${size}`} aria-hidden="true">
+      <svg viewBox="0 0 48 24" width={size === 'sm' ? 36 : 48} height={size === 'sm' ? 18 : 24} fill="none">
+        <path d="M3 19 H45" className="bridge__deck" />
+        <path d="M3 19 Q13 6 24 6" className={`bridge__half bridge__half--${from.toLowerCase()}`} />
+        <path d="M24 6 Q35 6 45 19" className={`bridge__half bridge__half--${to}`} />
+        <path d="M39 15.5 L45 19 L38.5 20.5" className={`bridge__half bridge__half--${to}`} />
+      </svg>
+    </span>
   );
 }

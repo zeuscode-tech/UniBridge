@@ -1,8 +1,7 @@
 import { StrictMode, lazy, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import { HashRouter, Route, Routes } from 'react-router-dom';
-import '@fontsource-variable/inter';
-import '@fontsource-variable/manrope';
+import 'pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css';
 import './styles/fonts.css';
 import './styles/tokens.css';
 import './styles/base.css';
@@ -20,6 +19,7 @@ const Scholarships = lazy(() => import('./pages/Scholarships'));
 const Guides = lazy(() => import('./pages/Guides'));
 const GuideArticle = lazy(() => import('./pages/GuideArticle'));
 const MyPlan = lazy(() => import('./pages/MyPlan'));
+const LifeTranslator = lazy(() => import('./pages/LifeTranslator'));
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 const NotFound = lazy(() => import('./pages/NotFound'));
@@ -42,6 +42,7 @@ createRoot(document.getElementById('root')!).render(
               <Route path="guides" element={<Guides />} />
               <Route path="guides/:slug" element={<GuideArticle />} />
               <Route path="my-plan" element={<MyPlan />} />
+              <Route path="life" element={<LifeTranslator />} />
               <Route path="about" element={<About />} />
               <Route path="contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />

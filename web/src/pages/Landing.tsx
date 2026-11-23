@@ -1,7 +1,6 @@
 import { useRef, useState, type FormEvent, type PointerEvent } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import {
-  ArrowRight,
   CircleDashed,
   CircleHelp,
   ClipboardCheck,
@@ -14,9 +13,10 @@ import {
 import { destinationOf, usePrefs, type Direction } from '../state/prefs';
 import { UNIVERSITIES } from '../data/universities';
 import { SCHOLARSHIPS, KIND_LABEL } from '../data/scholarships';
+import { LIFE_PAIRS, destSide, homeSide } from '../data/lifeTranslator';
 import { UniversityCard } from '../components/UniversityCard';
 import { DirectionSwitch } from '../components/Layout';
-import { ConceptImage, Reveal } from '../components/ui';
+import { BridgeMark, ConceptImage, Reveal } from '../components/ui';
 import bridge from '../assets/bridge.jpg';
 import korea from '../assets/korea.jpg';
 import kyrgyzstan from '../assets/kyrgyzstan.jpg';
@@ -62,6 +62,7 @@ function HeroVisual() {
           alt={tr(
             'Illustration of a bridge between Kyrgyzstan and South Korea',
             'Иллюстрация моста между Кыргызстаном и Южной Кореей',
+            '키르기스스탄과 한국을 잇는 다리 그림',
           )}
         />
       </div>
@@ -69,23 +70,23 @@ function HeroVisual() {
         <div className="hero__search-top">
           <p className="hero__search-title">
             {direction === 'kg-kr'
-              ? tr('Universities in South Korea', 'Университеты Южной Кореи')
-              : tr('Universities in Kyrgyzstan', 'Университеты Кыргызстана')}
+              ? tr('Universities in South Korea', 'Университеты Южной Кореи', '한국의 대학')
+              : tr('Universities in Kyrgyzstan', 'Университеты Кыргызстана', '키르기스스탄의 대학')}
           </p>
           <DirectionSwitch />
         </div>
         <label className="search-field">
           <Search size={18} aria-hidden="true" />
-          <span className="sr-only">{tr('Search universities', 'Поиск университетов')}</span>
+          <span className="sr-only">{tr('Search universities', 'Поиск университетов', '대학 검색')}</span>
           <input
             type="search"
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder={tr('University name or city…', 'Название вуза или город…')}
+            placeholder={tr('University name or city…', 'Название вуза или город…', '대학 이름이나 도시…')}
             autoComplete="off"
           />
           <button type="submit" className="btn btn--primary btn--sm">
-            {tr('Search', 'Найти')}
+            {tr('Search', 'Найти', '검색')}
           </button>
         </label>
       </form>
@@ -96,10 +97,10 @@ function HeroVisual() {
 function RouteStrip() {
   const { tr } = usePrefs();
   return (
-    <div className="route" aria-label={tr('Bishkek to Seoul: 4,417 km, 3 hours time difference', 'Бишкек — Сеул: 4 417 км, разница во времени 3 часа')}>
+    <div className="route" aria-label={tr('Bishkek to Seoul: 4,417 km, 3 hours time difference', 'Бишкек — Сеул: 4 417 км, разница во времени 3 часа', '비슈케크에서 서울까지 4,417km, 시차 3시간')}>
       <div className="route__end">
-        <span className="route__city">{tr('Bishkek', 'Бишкек')}</span>
-        <span className="route__coord">42.87° N · 74.59° E</span>
+        <span className="route__city">{tr('Bishkek', 'Бишкек', '비슈케크')}</span>
+        <span className="route__coord">42.87° N, 74.59° E</span>
       </div>
       <div className="route__track" aria-hidden="true">
         <svg className="route__arc" viewBox="0 0 600 60" preserveAspectRatio="none">
@@ -111,8 +112,8 @@ function RouteStrip() {
         <span>UTC+6 → UTC+9</span>
       </div>
       <div className="route__end route__end--right">
-        <span className="route__city">{tr('Seoul', 'Сеул')}</span>
-        <span className="route__coord">37.57° N · 126.98° E</span>
+        <span className="route__city">{tr('Seoul', 'Сеул', '서울')}</span>
+        <span className="route__coord">37.57° N, 126.98° E</span>
       </div>
     </div>
   );
@@ -130,24 +131,26 @@ function Destinations() {
       d: 'kg-kr',
       img: korea,
       tag: 'KG → KR',
-      title: tr('Study in South Korea', 'Учёба в Южной Корее'),
+      title: tr('Study in South Korea', 'Учёба в Южной Корее', '한국에서 공부하기'),
       text: tr(
         'For students from Kyrgyzstan: Korean universities, GKS and other funding, TOPIK and visa basics.',
         'Для студентов из Кыргызстана: корейские вузы, GKS и другое финансирование, TOPIK и основы визы.',
+        '키르기스스탄 학생을 위해 한국 대학, GKS와 다른 장학금, TOPIK, 비자 기본 정보를 모았어요.',
       ),
-      cta: tr('Universities in Korea', 'Университеты Кореи'),
+      cta: tr('Universities in Korea', 'Университеты Кореи', '한국의 대학'),
       count: UNIVERSITIES.filter((u) => u.country === 'KR').length,
     },
     {
       d: 'kr-kg',
       img: kyrgyzstan,
       tag: 'KR → KG',
-      title: tr('Study in Kyrgyzstan', 'Учёба в Кыргызстане'),
+      title: tr('Study in Kyrgyzstan', 'Учёба в Кыргызстане', '키르기스스탄에서 공부하기'),
       text: tr(
         'For students from Korea: universities in Bishkek and Osh, grants, documents and the e-visa portal.',
         'Для студентов из Кореи: вузы Бишкека и Оша, гранты, документы и портал электронных виз.',
+        '한국 학생을 위해 비슈케크와 오시의 대학, 지원금, 서류, 전자 비자 포털을 모았어요.',
       ),
-      cta: tr('Universities in Kyrgyzstan', 'Университеты Кыргызстана'),
+      cta: tr('Universities in Kyrgyzstan', 'Университеты Кыргызстана', '키르기스스탄의 대학'),
       count: UNIVERSITIES.filter((u) => u.country === 'KG').length,
     },
   ];
@@ -156,9 +159,9 @@ function Destinations() {
       <div className="container">
         <div className="section-head">
           <div>
-            <p className="eyebrow">{tr('Two directions, one bridge', 'Два направления, один мост')}</p>
+            <p className="eyebrow">{tr('Two directions, one bridge', 'Два направления, один мост', '두 방향, 하나의 다리')}</p>
             <h2 className="h2" id="dest-title">
-              {tr('Where do you want to study?', 'Куда ты хочешь поступить?')}
+              {tr('Where do you want to study?', 'Куда ты хочешь поступить?', '어디에서 공부하고 싶나요?')}
             </h2>
           </div>
         </div>
@@ -171,14 +174,13 @@ function Destinations() {
                   <div className="dest__meta">
                     <span className="tag">{c.tag}</span>
                     <span className="muted">
-                      {c.count} {tr('universities listed', 'вузов в каталоге')}
+                      {tr(`${c.count} universities listed`, `${c.count} вузов в каталоге`, `대학 ${c.count}곳`)}
                     </span>
                   </div>
                   <h3 className="h3">{c.title}</h3>
                   <p className="body-2">{c.text}</p>
                   <button type="button" className="link link--arrow stretched" onClick={() => go(c.d)}>
                     {c.cta}
-                    <ArrowRight size={16} aria-hidden="true" />
                   </button>
                 </div>
               </article>
@@ -190,29 +192,81 @@ function Destinations() {
   );
 }
 
+function LifePreview() {
+  const { tr, l, direction } = usePrefs();
+  const dest = destinationOf(direction);
+  const sample = ['taxi', 'maps', 'messenger', 'foreigner-help']
+    .map((id) => LIFE_PAIRS.find((p) => p.id === id))
+    .filter((p): p is (typeof LIFE_PAIRS)[number] => !!p);
+  const label = (s?: { name: string; local?: string }) => (s ? s.local ?? s.name : '');
+  return (
+    <section className="section" aria-labelledby="life-title">
+      <div className="container">
+        <div className="card life-teaser">
+          <div className="life-teaser__text">
+            <p className="eyebrow">
+              <span lang="ko">생활 번역기</span> · Life Translator
+            </p>
+            <h2 className="h2" id="life-title">
+              {tr('Your apps, translated to the other country', 'Твои приложения — в переводе на другую страну', '내가 쓰던 앱을 다른 나라 버전으로')}
+            </h2>
+            <p className="body-2">
+              {tr(
+                'Google Translate translates words. UniBridge translates everyday life: what replaces the taxi app, the map and the messenger you use at home.',
+                'Google Translate переводит слова. UniBridge переводит привычную жизнь: чем заменить такси, карты и мессенджер, которыми ты пользуешься дома.',
+                'Google Translate는 말을 번역해요. UniBridge는 일상을 번역해요. 집에서 쓰던 택시 앱, 지도, 메신저 대신 무엇을 쓰면 되는지 알려 드려요.',
+              )}
+            </p>
+            <Link to="/life" className="btn btn--primary">
+              {tr('Open Life Translator', 'Открыть переводчик жизни', '생활 번역기 열기')}
+            </Link>
+          </div>
+          <ul className="life-teaser__rows">
+            {sample.map((p) => {
+              const from = homeSide(p, dest)[0];
+              const to = destSide(p, dest)[0];
+              const gap = p.gapIn === dest;
+              return (
+                <li key={p.id} className={gap ? 'is-gap' : undefined}>
+                  <span className="life-teaser__need">{l(p.need)}</span>
+                  <span className="life-teaser__pair">
+                    <span lang={dest === 'KR' ? 'ru' : 'ko'}>{label(from)}</span>
+                    <BridgeMark from={dest === 'KR' ? 'KG' : 'KR'} size="sm" />
+                    <span lang={dest === 'KR' ? 'ko' : 'ru'}>{gap ? tr('no equivalent', 'аналога нет', '대체 서비스 없음') : label(to)}</span>
+                  </span>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function HowItWorks() {
   const { tr } = usePrefs();
   const steps = [
-    { icon: Compass, t: tr('Choose a direction', 'Выбери направление'), d: tr('Kyrgyzstan → Korea or Korea → Kyrgyzstan. Change it any time.', 'Кыргызстан → Корея или Корея → Кыргызстан. Можно сменить в любой момент.') },
-    { icon: FileSearch, t: tr('Find a university', 'Найди университет'), d: tr('Filter by city and type, open the official site in one click.', 'Фильтр по городу и типу, официальный сайт — в один клик.') },
-    { icon: ClipboardCheck, t: tr('Check requirements & funding', 'Изучи требования и стипендии'), d: tr('Step-by-step guides that say where each fact comes from.', 'Пошаговые гайды, где у каждого факта есть источник.') },
-    { icon: Route, t: tr('Build your plan', 'Собери свой план'), d: tr('A checklist saved in your browser. No sign-up.', 'Чек-лист сохраняется в браузере. Без регистрации.') },
+    { icon: Compass, t: tr('Choose a direction', 'Выбери направление', '방향 고르기'), d: tr('Kyrgyzstan → Korea or Korea → Kyrgyzstan. Change it any time.', 'Кыргызстан → Корея или Корея → Кыргызстан. Можно сменить в любой момент.', '키르기스스탄 → 한국 또는 한국 → 키르기스스탄. 언제든 바꿀 수 있어요.') },
+    { icon: FileSearch, t: tr('Find a university', 'Найди университет', '대학 찾기'), d: tr('Filter by city and type, open the official site in one click.', 'Фильтр по городу и типу, официальный сайт — в один клик.', '도시와 유형으로 골라 보고, 공식 사이트를 바로 열 수 있어요.') },
+    { icon: ClipboardCheck, t: tr('Check requirements & funding', 'Изучи требования и стипендии', '지원 조건과 장학금 확인하기'), d: tr('Step-by-step guides that say where each fact comes from.', 'Пошаговые гайды, где у каждого факта есть источник.', '모든 정보의 출처를 밝힌 단계별 가이드예요.') },
+    { icon: Route, t: tr('Build your plan', 'Собери свой план', '내 계획 세우기'), d: tr('A checklist saved in your browser. No sign-up.', 'Чек-лист сохраняется в браузере. Без регистрации.', '체크리스트는 브라우저에 저장돼요. 가입은 필요 없어요.') },
   ];
   return (
     <section className="section section--tint" id="how" aria-labelledby="how-title">
       <div className="container">
         <div className="section-head">
           <div>
-            <p className="eyebrow">{tr('How it works', 'Как это работает')}</p>
+            <p className="eyebrow">{tr('How it works', 'Как это работает', '이용 방법')}</p>
             <h2 className="h2" id="how-title">
-              {tr('From an idea to admission — a clear process', 'От идеи до поступления — понятный процесс')}
+              {tr('From an idea to admission — a clear process', 'От идеи до поступления — понятный процесс', '생각에서 입학까지, 한눈에 보이는 과정')}
             </h2>
           </div>
         </div>
         <ol className="steps">
           {steps.map((s, i) => (
             <Reveal as="li" key={i} delay={i * 60} className="step">
-              <span className="step__num">{String(i + 1).padStart(2, '0')}</span>
+              <span className="step__num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
               <span className="step__icon" aria-hidden="true">
                 <s.icon size={22} strokeWidth={1.75} />
               </span>
@@ -235,14 +289,13 @@ function Featured() {
       <div className="container">
         <div className="section-head">
           <div>
-            <p className="eyebrow">{dest === 'KR' ? tr('South Korea', 'Южная Корея') : tr('Kyrgyzstan', 'Кыргызстан')}</p>
+            <p className="eyebrow">{dest === 'KR' ? tr('South Korea', 'Южная Корея', '한국') : tr('Kyrgyzstan', 'Кыргызстан', '키르기스스탄')}</p>
             <h2 className="h2" id="feat-title">
-              {tr('Start by exploring universities', 'Начни с изучения университетов')}
+              {tr('Start by exploring universities', 'Начни с изучения университетов', '대학부터 살펴보세요')}
             </h2>
           </div>
           <Link to="/universities" className="btn btn--secondary">
-            {tr('All universities', 'Все университеты')}
-            <ArrowRight size={16} aria-hidden="true" />
+            {tr('All universities', 'Все университеты', '모든 대학')}
           </Link>
         </div>
         <div className="uni-grid uni-grid--3">
@@ -264,19 +317,19 @@ function ScholarshipsPreview() {
     <section className="section section--tint" aria-labelledby="sch-title">
       <div className="container split">
         <div className="split__text">
-          <p className="eyebrow">{tr('Funding', 'Финансирование')}</p>
+          <p className="eyebrow">{tr('Funding', 'Финансирование', '학비 지원')}</p>
           <h2 className="h2" id="sch-title">
-            {tr('Scholarships, without the hype', 'Стипендии — без громких обещаний')}
+            {tr('Scholarships, without the hype', 'Стипендии — без громких обещаний', '과장 없는 장학금 정보')}
           </h2>
           <p className="lead">
             {tr(
               'We list who runs each programme and link the official notice. Coverage and deadlines stay “to be confirmed” until we have checked them.',
               'Мы показываем, кто проводит программу, и даём ссылку на официальное объявление. Покрытие и сроки остаются «уточняется», пока мы их не проверили.',
+              '프로그램을 운영하는 기관과 공식 공고 링크를 보여 드려요. 지원 범위와 마감일은 저희가 확인하기 전까지 ‘확인 중’으로 표시해요.',
             )}
           </p>
           <Link to="/scholarships" className="btn btn--primary">
-            {tr('Explore scholarships', 'Изучить стипендии')}
-            <ArrowRight size={16} aria-hidden="true" />
+            {tr('Explore scholarships', 'Изучить стипендии', '장학금 보기')}
           </Link>
         </div>
         <div className="split__cards">
@@ -288,12 +341,12 @@ function ScholarshipsPreview() {
                 <p className="body-2 muted">{l(s.provider)}</p>
                 <dl className="kv">
                   <div>
-                    <dt>{tr('Deadline', 'Дедлайн')}</dt>
-                    <dd>{tr('To be confirmed', 'Уточняется')}</dd>
+                    <dt>{tr('Deadline', 'Дедлайн', '마감일')}</dt>
+                    <dd>{tr('To be confirmed', 'Уточняется', '확인 중')}</dd>
                   </div>
                   <div>
-                    <dt>{tr('Coverage', 'Покрытие')}</dt>
-                    <dd>{tr('Check the official notice', 'См. официальное объявление')}</dd>
+                    <dt>{tr('Coverage', 'Покрытие', '지원 범위')}</dt>
+                    <dd>{tr('Check the official notice', 'См. официальное объявление', '공식 공고를 확인하세요')}</dd>
                   </div>
                 </dl>
               </Link>
@@ -308,23 +361,24 @@ function ScholarshipsPreview() {
 function Trust() {
   const { tr } = usePrefs();
   const rows = [
-    { icon: ShieldCheck, cls: 'verified', t: tr('Verified', 'Проверено'), d: tr('Checked against the official source, with the date of the check.', 'Сверено с официальным источником, указана дата проверки.') },
-    { icon: CircleDashed, cls: 'needs_review', t: tr('Not yet verified', 'Не проверено'), d: tr('Taken from an official site, but not reviewed by the team yet.', 'Взято с официального сайта, но командой ещё не проверено.') },
-    { icon: CircleHelp, cls: 'unknown', t: tr('No confirmed data', 'Нет данных'), d: tr('We don’t know yet — so we say so instead of guessing.', 'Мы пока не знаем — и честно это показываем.') },
+    { icon: ShieldCheck, cls: 'verified', t: tr('Verified', 'Проверено', '확인됨'), d: tr('Checked against the official source, with the date of the check.', 'Сверено с официальным источником, указана дата проверки.', '공식 출처와 대조했고, 확인한 날짜를 적어 두었어요.') },
+    { icon: CircleDashed, cls: 'needs_review', t: tr('Not yet verified', 'Не проверено', '아직 확인 안 됨'), d: tr('Taken from an official site, but not reviewed by the team yet.', 'Взято с официального сайта, но командой ещё не проверено.', '공식 사이트에서 가져왔지만, 팀이 아직 검토하지 않았어요.') },
+    { icon: CircleHelp, cls: 'unknown', t: tr('No confirmed data', 'Нет данных', '확인된 정보 없음'), d: tr('We don’t know yet — so we say so instead of guessing.', 'Мы пока не знаем — и честно это показываем.', '아직 몰라요. 추측하지 않고 모른다고 적어요.') },
   ];
   return (
     <section className="section" aria-labelledby="trust-title">
       <div className="container">
         <div className="trust">
           <div className="trust__intro">
-            <p className="eyebrow">{tr('Information policy', 'Политика информации')}</p>
+            <p className="eyebrow">{tr('Information policy', 'Политика информации', '정보 원칙')}</p>
             <h2 className="h2" id="trust-title">
-              {tr('Every fact shows where it came from', 'У каждого факта видно происхождение')}
+              {tr('Every fact shows where it came from', 'У каждого факта видно происхождение', '모든 정보에 출처가 있어요')}
             </h2>
             <p className="body-2">
               {tr(
                 'No made-up ratings, no “guaranteed admission”, no fake reviews. Applications always go through the university itself.',
                 'Без выдуманных рейтингов, «гарантированного поступления» и фейковых отзывов. Заявки — только через сам университет.',
+                '지어낸 순위, ‘합격 보장’, 가짜 후기는 없어요. 지원은 언제나 대학에 직접 해요.',
               )}
             </p>
           </div>
@@ -360,12 +414,11 @@ function FinalCta() {
               <path d="M-20 390 C 300 140, 900 140, 1220 390" />
             </svg>
             <div className="cta-band__text">
-              <h2 className="h2">{tr('Start building your admission plan', 'Начни строить свой план поступления')}</h2>
-              <p>{tr('Three short questions, no account. You can change everything later.', 'Три коротких вопроса, без аккаунта. Всё можно поменять позже.')}</p>
+              <h2 className="h2">{tr('Start building your admission plan', 'Начни строить свой план поступления', '입학 계획을 세워 보세요')}</h2>
+              <p>{tr('Three short questions, no account. You can change everything later.', 'Три коротких вопроса, без аккаунта. Всё можно поменять позже.', '짧은 질문 3개면 돼요. 계정은 필요 없고, 나중에 모두 바꿀 수 있어요.')}</p>
             </div>
             <Link to="/start" className="btn btn--white btn--lg">
-              {tr('Get started', 'Начать')}
-              <ArrowRight size={18} aria-hidden="true" />
+              {tr('Get started', 'Начать', '시작하기')}
             </Link>
           </div>
         </Reveal>
@@ -384,36 +437,36 @@ export default function Landing() {
           <div className="hero__text">
             <p className="pill">
               <span className="pill__dot" aria-hidden="true" />
-              {tr('Kyrgyzstan ↔ South Korea', 'Кыргызстан ↔ Южная Корея')}
+              {tr('Kyrgyzstan ↔ South Korea', 'Кыргызстан ↔ Южная Корея', '키르기스스탄 ↔ 한국')}
             </p>
             <h1 className="display">
-              {tr('Your path to studying abroad ', 'Твой путь к обучению за границей ')}
-              <span className="display__accent">{tr('starts here', 'начинается здесь')}</span>
+              {tr(
+                'Your first weeks in a new country, already figured out',
+                'Первые недели в новой стране — уже разобраны',
+                '낯선 나라에서의 첫\u00a0몇\u00a0주, 미리 정리해 두었어요',
+              )}
             </h1>
             <p className="lead hero__lead">
               {tr(
-                'Find a university, understand the requirements, learn about scholarships and build a step-by-step admission plan.',
-                'Найди университет, изучи требования, узнай о стипендиях и составь пошаговый план поступления.',
+                'What replaces your everyday apps, which documents to sort out first and where to ask for help — for students moving between Kyrgyzstan and Korea. Every fact has a source and a check date.',
+                'Чем заменить привычные приложения, какие документы оформить первыми и куда обращаться за помощью — для студентов между Кыргызстаном и Кореей. У каждого факта есть источник и дата проверки.',
+                '평소 쓰던 앱 대신 무엇을 쓸지, 어떤 서류부터 챙길지, 도움은 어디서 받을지 알려 드려요. 키르기스스탄과 한국을 오가는 학생을 위해 만들었어요. 모든 정보에는 출처와 확인 날짜가 있어요.',
               )}
             </p>
             <div className="hero__ctas">
-              <Link to="/start" className="btn btn--primary btn--lg">
-                {tr('Find a university', 'Найти университет')}
-                <ArrowRight size={18} aria-hidden="true" />
+              <Link to="/life" className="btn btn--primary btn--lg">
+                {tr('Open Life Translator', 'Открыть переводчик жизни', '생활 번역기 열기')}
               </Link>
-              <button
-                type="button"
-                className="btn btn--secondary btn--lg"
-                onClick={() => document.getElementById('how')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
-              >
-                {tr('How it works', 'Как это работает')}
-              </button>
+              <Link to="/start" className="btn btn--secondary btn--lg">
+                {tr('Find a university', 'Найти университет', '대학 찾기')}
+              </Link>
             </div>
             <p className="hero__note">
               <ShieldCheck size={16} aria-hidden="true" />
               {tr(
                 'Information from checkable sources. Applications happen on official sites.',
                 'Информация из проверяемых источников. Подача заявок — на официальных сайтах.',
+                '확인할 수 있는 출처의 정보만 담았어요. 지원은 공식 사이트에서 해요.',
               )}
             </p>
           </div>
@@ -424,6 +477,7 @@ export default function Landing() {
         </div>
       </section>
       <Destinations />
+      <LifePreview />
       <HowItWorks />
       <Featured />
       <ScholarshipsPreview />
