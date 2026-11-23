@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="#2563EB"/><path d="M6.5 21.5C9 14 12.4 10.5 16 10.5s7 3.5 9.5 11" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><path d="M5 21.5h22" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><path d="M11.5 15.6v5.9M16 13.2v8.3M20.5 15.6v5.9" stroke="#fff" stroke-opacity=".7" stroke-width="1.5" stroke-linecap="round"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>UniBridge</title>
+  <rect x="1" y="1" width="62" height="62" rx="15" fill="#fff" stroke="#E2E8F0" stroke-width="2"/>
+  <path d="M8 47 Q19 41 32 51 Q45 41 56 47 L56 54 Q44 51 32 60 Q20 51 8 54Z" fill="#0B2342"/>
+  <path d="M8 44 Q19 39 32 49 Q45 39 56 44" fill="none" stroke="#C59A4A" stroke-width="3" stroke-linecap="round"/>
+  <path d="M15 38 Q32 14 49 38 M19 24 V40 M45 24 V40" fill="none" stroke="#0B2342" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M12 41 Q32 30 52 41" fill="none" stroke="#0B2342" stroke-width="3"/>
+  <path d="M32 48 Q35 37 41 35 L31 35 Q25 39 28 43Z" fill="#B51E38"/>
+  <path d="M45 7 L47 12 L52 14 L47 16 L45 21 L43 16 L38 14 L43 12Z" fill="#B51E38"/>
+</svg>
