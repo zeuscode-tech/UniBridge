@@ -5,15 +5,11 @@
   gap: 10px;
 }
 .logo__mark {
-  width: 34px;
-  height: 34px;
+  width: 58px;
+  height: 40px;
   flex: none;
-}
-.logo__mark rect {
-  fill: var(--blue);
-}
-.logo__mark path {
-  stroke: #fff;
+  display: block;
+  object-fit: contain;
 }
 .logo__word {
   font-family: var(--font-display);
@@ -22,11 +18,10 @@
   letter-spacing: -0.03em;
   color: var(--navy);
 }
-.logo--inverse .logo__mark rect {
-  fill: #fff;
-}
-.logo--inverse .logo__mark path {
-  stroke: var(--navy);
+.logo--inverse .logo__mark {
+  background: #fff;
+  border-radius: 8px;
+  padding: 3px;
 }
 .logo--inverse .logo__word {
   color: #fff;
