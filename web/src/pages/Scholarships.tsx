@@ -9,43 +9,43 @@ const KIND_ICON = { government: Landmark, university: Building, exchange: Repeat
 
 function Details({ s }: { s: Scholarship }) {
   const { tr, l } = usePrefs();
-  const unknown = <span className="muted">{tr('Not confirmed', 'Не подтверждено')}</span>;
+  const unknown = <span className="muted">{tr('Not confirmed', 'Не подтверждено', '확인되지 않음')}</span>;
   return (
     <div className="sch-details">
       <p className="body-2 muted">{l(s.provider)}</p>
       <StatusBadge status={s.status} />
       <section>
-        <h3 className="label">{tr('Who it is for', 'Кому подходит')}</h3>
+        <h3 className="label">{tr('Who it is for', 'Кому подходит', '지원 대상')}</h3>
         <p className="body-2">{l(s.who)}</p>
       </section>
       <dl className="kv kv--rows">
         <div>
-          <dt>{tr('Levels', 'Уровни')}</dt>
-          <dd>{s.levels ? s.levels.map((x) => l(LEVEL_LABEL[x])).join(', ') : tr('Depends on the university', 'Зависит от вуза')}</dd>
+          <dt>{tr('Levels', 'Уровни', '과정')}</dt>
+          <dd>{s.levels ? s.levels.map((x) => l(LEVEL_LABEL[x])).join(', ') : tr('Depends on the university', 'Зависит от вуза', '대학마다 달라요')}</dd>
         </div>
         <div>
-          <dt>{tr('Coverage', 'Покрытие')}</dt>
+          <dt>{tr('Coverage', 'Покрытие', '지원 내용')}</dt>
           <dd>{s.coverage ? l(s.coverage) : unknown}</dd>
         </div>
         <div>
-          <dt>{tr('Deadline', 'Дедлайн')}</dt>
-          <dd>{s.deadline ?? <span className="muted">{tr('To be confirmed', 'Срок уточняется')}</span>}</dd>
+          <dt>{tr('Deadline', 'Дедлайн', '마감일')}</dt>
+          <dd>{s.deadline ?? <span className="muted">{tr('To be confirmed', 'Срок уточняется', '확인 중')}</span>}</dd>
         </div>
       </dl>
       <section>
-        <h3 className="label">{tr('How to apply', 'Как подать')}</h3>
+        <h3 className="label">{tr('How to apply', 'Как подать', '지원 방법')}</h3>
         <p className="body-2">{l(s.howToApply)}</p>
       </section>
       <section>
-        <h3 className="label">{tr('Sources', 'Источники')}</h3>
+        <h3 className="label">{tr('Sources', 'Источники', '출처')}</h3>
         {s.source ? (
           <ExternalLink href={s.source.url}>{s.source.label}</ExternalLink>
         ) : (
-          <p className="body-2 muted">{tr('The official page of the university you choose.', 'Официальная страница выбранного вуза.')}</p>
+          <p className="body-2 muted">{tr('The official page of the university you choose.', 'Официальная страница выбранного вуза.', '선택한 대학의 공식 페이지를 확인하세요.')}</p>
         )}
       </section>
       <p className="hint">
-        {tr('UniBridge never shows chances of winning or “guaranteed” grants.', 'UniBridge не показывает «шансы» и «гарантированные» гранты.')}
+        {tr('UniBridge never shows chances of winning or “guaranteed” grants.', 'UniBridge не показывает «шансы» и «гарантированные» гранты.', 'UniBridge는 합격 가능성이나 ‘보장된’ 장학금을 보여 주지 않아요.')}
       </p>
     </div>
   );
@@ -71,19 +71,19 @@ export default function Scholarships() {
   return (
     <div className="page page--canvas">
       <div className="container">
-        <Breadcrumbs items={[{ label: tr('Home', 'Главная'), to: '/' }, { label: tr('Scholarships', 'Стипендии') }]} />
+        <Breadcrumbs items={[{ label: tr('Home', 'Главная', '홈'), to: '/' }, { label: tr('Scholarships', 'Стипендии', '장학금') }]} />
         <PageHead
           eyebrow={direction === 'kg-kr' ? 'KG → KR' : 'KR → KG'}
-          title={tr('Scholarships and funding', 'Стипендии и финансирование')}
+          title={tr('Scholarships and funding', 'Стипендии и финансирование', '장학금과 학비 지원')}
           lead={tr(
             'Explore funding programmes and check their terms with the official provider.',
-            'Изучай программы поддержки обучения и проверяй условия в официальных источниках.',
+            'Изучай программы поддержки обучения и проверяй условия в официальных источниках.', '장학 프로그램을 살펴보고, 조건은 공식 운영 기관에서 꼭 확인하세요.',
           )}
         />
 
-        <div className="filter-row" role="group" aria-label={tr('Type of funding', 'Тип финансирования')}>
+        <div className="filter-row" role="group" aria-label={tr('Type of funding', 'Тип финансирования', '지원 유형')}>
           <button type="button" className={`chip${kinds.length === 0 ? ' is-on' : ''}`} aria-pressed={kinds.length === 0} onClick={() => update((p) => p.delete('kind'))}>
-            {tr('All', 'Все')} <span className="chip__n">{pool.length}</span>
+            {tr('All', 'Все', '전체')} <span className="chip__n">{pool.length}</span>
           </button>
           {allKinds.map((k) => {
             const on = kinds.includes(k);
@@ -123,18 +123,18 @@ export default function Scholarships() {
                   <p className="body-2 sch__who">{l(s.who)}</p>
                   <dl className="kv">
                     <div>
-                      <dt>{tr('Deadline', 'Дедлайн')}</dt>
-                      <dd>{s.deadline ?? tr('To be confirmed', 'Уточняется')}</dd>
+                      <dt>{tr('Deadline', 'Дедлайн', '마감일')}</dt>
+                      <dd>{s.deadline ?? tr('To be confirmed', 'Уточняется', '확인 중')}</dd>
                     </div>
                     <div>
-                      <dt>{tr('Coverage', 'Покрытие')}</dt>
-                      <dd>{s.coverage ? l(s.coverage) : tr('Not confirmed', 'Не подтверждено')}</dd>
+                      <dt>{tr('Coverage', 'Покрытие', '지원 내용')}</dt>
+                      <dd>{s.coverage ? l(s.coverage) : tr('Not confirmed', 'Не подтверждено', '확인되지 않음')}</dd>
                     </div>
                   </dl>
                   <div className="sch__foot">
                     <StatusBadge status={s.status} />
                     <button type="button" className="link link--arrow stretched" onClick={() => update((p) => p.set('open', s.slug))}>
-                      {tr('Details', 'Подробнее')}
+                      {tr('Details', 'Подробнее', '자세히 보기')}
                       <ArrowRight size={16} aria-hidden="true" />
                     </button>
                   </div>
@@ -145,11 +145,11 @@ export default function Scholarships() {
         ) : (
           <EmptyState
             icon={<SearchX size={28} />}
-            title={tr('Nothing here for this filter', 'По этому фильтру ничего нет')}
-            text={tr('Try another type of funding.', 'Попробуй другой тип финансирования.')}
+            title={tr('Nothing here for this filter', 'По этому фильтру ничего нет', '이 조건에 맞는 장학금이 없어요')}
+            text={tr('Try another type of funding.', 'Попробуй другой тип финансирования.', '다른 지원 유형을 선택해 보세요.')}
             action={
               <button type="button" className="btn btn--secondary" onClick={() => update((p) => p.delete('kind'))}>
-                {tr('Show all', 'Показать все')}
+                {tr('Show all', 'Показать все', '전체 보기')}
               </button>
             }
           />

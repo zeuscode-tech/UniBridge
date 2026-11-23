@@ -11,14 +11,14 @@ export default function NotFound() {
         <path d="M4 80 H 236" />
       </svg>
       <p className="eyebrow">404</p>
-      <h1 className="h1">{tr('This bridge isn’t built yet', 'Этот мост ещё не построен')}</h1>
-      <p className="lead">{tr('The page you were looking for doesn’t exist.', 'Такой страницы нет.')}</p>
+      <h1 className="h1">{tr('This bridge isn’t built yet', 'Этот мост ещё не построен', '아직 놓이지 않은 다리예요')}</h1>
+      <p className="lead">{tr('The page you were looking for doesn’t exist.', 'Такой страницы нет.', '찾는 페이지가 없어요.')}</p>
       <div className="hero__ctas">
         <Link to="/" className="btn btn--primary">
-          {tr('Go home', 'На главную')}
+          {tr('Go home', 'На главную', '홈으로')}
         </Link>
         <Link to="/universities" className="btn btn--secondary">
-          {tr('Universities', 'Университеты')}
+          {tr('Universities', 'Университеты', '대학')}
         </Link>
       </div>
     </div>

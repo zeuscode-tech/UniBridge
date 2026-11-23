@@ -71,14 +71,14 @@ export default function GuideArticle() {
       <div className="container">
         <Breadcrumbs
           items={[
-            { label: tr('Guides', 'Гайды'), to: '/guides' },
+            { label: tr('Guides', 'Гайды', '가이드'), to: '/guides' },
             { label: l(CATEGORY_LABEL[guide.category]) },
             { label: l(guide.title) },
           ]}
         />
         <div className="article-layout">
-          <nav className="article-nav" aria-label={tr('All guides', 'Все гайды')}>
-            <p className="label">{tr('Six steps', 'Шесть шагов')}</p>
+          <nav className="article-nav" aria-label={tr('All guides', 'Все гайды', '전체 가이드')}>
+            <p className="label">{tr('Six steps', 'Шесть шагов', '6단계')}</p>
             <ol>
               {GUIDES.map((g) => (
                 <li key={g.slug}>
@@ -97,7 +97,7 @@ export default function GuideArticle() {
                 <Icon size={24} strokeWidth={1.75} />
               </span>
               <p className="eyebrow">
-                {tr(`Step ${guide.step} of 6`, `Шаг ${guide.step} из 6`)} · {l(CATEGORY_LABEL[guide.category])}
+                {tr(`Step ${guide.step} of 6`, `Шаг ${guide.step} из 6`, `6단계 중 ${guide.step}단계`)} · {l(CATEGORY_LABEL[guide.category])}
               </p>
               <h1 className="h1">{l(guide.title)}</h1>
               <p className="lead">{l(guide.summary)}</p>
@@ -106,7 +106,7 @@ export default function GuideArticle() {
                 <p>
                   {tr(
                     'General guidance, not legal advice. Rules depend on citizenship, university, programme and intake year — check the official sources below.',
-                    'Это общие рекомендации, а не юридическая консультация. Правила зависят от гражданства, вуза, программы и года набора — сверяйся с официальными источниками ниже.',
+                    'Это общие рекомендации, а не юридическая консультация. Правила зависят от гражданства, вуза, программы и года набора — сверяйся с официальными источниками ниже.', '일반 안내이며 법률 자문이 아니에요. 규정은 국적, 대학, 학과, 입학 연도에 따라 달라요. 아래 공식 출처에서 확인하세요.',
                   )}
                 </p>
               </div>
@@ -155,39 +155,39 @@ export default function GuideArticle() {
 
             <section className="article-cta card">
               <div>
-                <h2 className="h4">{tr('Add these steps to my plan', 'Добавить эти шаги в мой план')}</h2>
+                <h2 className="h4">{tr('Add these steps to my plan', 'Добавить эти шаги в мой план', '이 단계를 내 계획에 추가하기')}</h2>
                 <ul className="article-cta__items">
                   {guide.planItems.map((id) => {
                     const it = findItem(id);
                     return it ? <li key={id}>{l(it.title)}</li> : null;
                   })}
                 </ul>
-                <p className="hint">{tr('Saved in this browser only.', 'Сохраняется только в этом браузере.')}</p>
+                <p className="hint">{tr('Saved in this browser only.', 'Сохраняется только в этом браузере.', '이 브라우저에만 저장돼요.')}</p>
               </div>
               <div className="article-cta__btns">
                 {added ? (
                   <Link to="/my-plan" className="btn btn--secondary">
                     <Check size={16} aria-hidden="true" />
-                    {tr('In your plan — open', 'Уже в плане — открыть')}
+                    {tr('In your plan — open', 'Уже в плане — открыть', '계획에 있어요. 열기')}
                   </Link>
                 ) : (
                   <button type="button" className="btn btn--primary" onClick={() => plan.addItems(guide.planItems)}>
                     <ListPlus size={18} aria-hidden="true" />
-                    {tr('Add to my plan', 'Добавить в план')}
+                    {tr('Add to my plan', 'Добавить в план', '내 계획에 추가')}
                   </button>
                 )}
                 <button type="button" className="btn btn--ghost" onClick={copy} aria-live="polite">
                   {copied ? <Check size={16} aria-hidden="true" /> : <Link2 size={16} aria-hidden="true" />}
-                  {copied ? tr('Link copied', 'Ссылка скопирована') : tr('Copy link', 'Скопировать ссылку')}
+                  {copied ? tr('Link copied', 'Ссылка скопирована', '링크를 복사했어요') : tr('Copy link', 'Скопировать ссылку', '링크 복사')}
                 </button>
               </div>
             </section>
 
-            <nav className="pager" aria-label={tr('Previous and next guide', 'Предыдущий и следующий гайд')}>
+            <nav className="pager" aria-label={tr('Previous and next guide', 'Предыдущий и следующий гайд', '이전 가이드와 다음 가이드')}>
               {prev ? (
                 <Link to={`/guides/${prev.slug}`} className="pager__link">
                   <span className="muted">
-                    <ArrowLeft size={14} aria-hidden="true" /> {tr('Previous', 'Назад')}
+                    <ArrowLeft size={14} aria-hidden="true" /> {tr('Previous', 'Назад', '이전')}
                   </span>
                   {l(prev.title)}
                 </Link>
@@ -197,7 +197,7 @@ export default function GuideArticle() {
               {next && (
                 <Link to={`/guides/${next.slug}`} className="pager__link pager__link--next">
                   <span className="muted">
-                    {tr('Next', 'Далее')} <ArrowRight size={14} aria-hidden="true" />
+                    {tr('Next', 'Далее', '다음')} <ArrowRight size={14} aria-hidden="true" />
                   </span>
                   {l(next.title)}
                 </Link>
@@ -207,7 +207,7 @@ export default function GuideArticle() {
 
           <aside className="article-aside">
             <div className="sticky-panel">
-              <p className="label">{tr('On this page', 'На этой странице')}</p>
+              <p className="label">{tr('On this page', 'На этой странице', '이 페이지 내용')}</p>
               <ul className="toc">
                 {guide.sections.map((s) => (
                   <li key={s.id}>
@@ -217,7 +217,7 @@ export default function GuideArticle() {
                   </li>
                 ))}
               </ul>
-              <p className="label">{tr('Official sources', 'Официальные источники')}</p>
+              <p className="label">{tr('Official sources', 'Официальные источники', '공식 출처')}</p>
               <ul className="sources">
                 {OFFICIAL_SOURCES[direction].map((s) => (
                   <li key={s.url}>

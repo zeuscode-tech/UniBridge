@@ -82,7 +82,7 @@ export function Sheet({
           <h2 className="h4" id={titleId}>
             {title}
           </h2>
-          <button type="button" className="icon-btn" onClick={onClose} aria-label={tr('Close', 'Закрыть')}>
+          <button type="button" className="icon-btn" onClick={onClose} aria-label={tr('Close', 'Закрыть', '닫기')}>
             <X size={20} />
           </button>
         </div>

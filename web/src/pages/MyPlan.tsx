@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Bookmark, Check, ListChecks, RotateCcw, Trash2, X } from 'lucide-react';
+import { Bookmark, Check, ListChecks, RotateCcw, Trash2, X } from 'lucide-react';
 import { usePrefs } from '../state/prefs';
 import { plan, usePlan } from '../state/plan';
 import { CHECKLIST, PHASES } from '../data/checklist';
 import { findUniversity, hostOf } from '../data/universities';
-import { Breadcrumbs, EmptyState } from '../components/ui';
+import { Breadcrumbs, EmptyState, PageHead } from '../components/ui';
 import { Sheet } from '../components/Sheet';
 
 function Ring({ value }: { value: number }) {
@@ -33,22 +33,24 @@ export default function MyPlan() {
     return (
       <div className="page page--canvas">
         <div className="container container--narrow">
-          <Breadcrumbs items={[{ label: tr('Home', 'Главная'), to: '/' }, { label: tr('My plan', 'Мой план') }]} />
+          <Breadcrumbs items={[{ label: tr('Home', 'Главная', '홈'), to: '/' }, { label: tr('My plan', 'Мой план', '내 계획') }]} />
+          <PageHead title={tr('My admission plan', 'Мой план поступления', '내 입학 계획')} />
           <div className="card">
             <EmptyState
               icon={<ListChecks size={30} />}
-              title={tr('You don’t have an admission plan yet', 'У тебя пока нет плана поступления')}
+              title={tr('You don’t have an admission plan yet', 'У тебя пока нет плана поступления', '아직 입학 계획이 없어요')}
               text={tr(
                 'Pick a university or start from the basic list of steps. Everything stays in this browser.',
                 'Выбери университет или начни с базового списка шагов. Всё хранится в этом браузере.',
+                '대학을 고르거나 기본 단계 목록으로 시작하세요. 모든 내용은 이 브라우저에만 저장돼요.',
               )}
               action={
                 <div className="empty__actions">
                   <button type="button" className="btn btn--primary" onClick={() => plan.start()}>
-                    {tr('Create my plan', 'Составить план')}
+                    {tr('Create my plan', 'Составить план', '계획 만들기')}
                   </button>
                   <Link to="/universities" className="btn btn--secondary">
-                    {tr('Browse universities', 'Смотреть вузы')}
+                    {tr('Browse universities', 'Смотреть вузы', '대학 둘러보기')}
                   </Link>
                 </div>
               }
@@ -62,27 +64,27 @@ export default function MyPlan() {
   return (
     <div className="page page--canvas">
       <div className="container">
-        <Breadcrumbs items={[{ label: tr('Home', 'Главная'), to: '/' }, { label: tr('My plan', 'Мой план') }]} />
+        <Breadcrumbs items={[{ label: tr('Home', 'Главная', '홈'), to: '/' }, { label: tr('My plan', 'Мой план', '내 계획') }]} />
         <header className="plan-head">
           <div>
-            <h1 className="h1">{tr('My admission plan', 'Мой план поступления')}</h1>
+            <h1 className="h1">{tr('My admission plan', 'Мой план поступления', '내 입학 계획')}</h1>
             <p className="lead">
               {direction === 'kg-kr'
-                ? tr('Kyrgyzstan → South Korea', 'Кыргызстан → Южная Корея')
-                : tr('South Korea → Kyrgyzstan', 'Южная Корея → Кыргызстан')}
+                ? tr('Kyrgyzstan → South Korea', 'Кыргызстан → Южная Корея', '키르기스스탄 → 한국')
+                : tr('South Korea → Kyrgyzstan', 'Южная Корея → Кыргызстан', '한국 → 키르기스스탄')}
             </p>
           </div>
           {items.length > 0 && (
-          <div className="plan-progress card" role="group" aria-label={tr('Preparation progress', 'Прогресс подготовки')}>
+          <div className="plan-progress card" role="group" aria-label={tr('Preparation progress', 'Прогресс подготовки', '준비 진행률')}>
             <div className="plan-progress__ring">
               <Ring value={progress} />
               <span>{Math.round(progress * 100)}%</span>
             </div>
             <div>
               <p className="plan-progress__n">
-                {tr(`${doneCount} of ${items.length} steps`, `${doneCount} из ${items.length} шагов`)}
+                {tr(`${doneCount} of ${items.length} steps`, `${doneCount} из ${items.length} шагов`, `${items.length}단계 중 ${doneCount}단계 완료`)}
               </p>
-              <p className="hint">{tr('Your preparation — not an official application status.', 'Это твоя подготовка, а не официальный статус заявки.')}</p>
+              <p className="hint">{tr('Your preparation — not an official application status.', 'Это твоя подготовка, а не официальный статус заявки.', '내 준비 상황이에요. 공식 지원 상태는 아니에요.')}</p>
             </div>
           </div>
           )}
@@ -92,9 +94,9 @@ export default function MyPlan() {
           <div className="plan__main">
             {!items.length && (
               <div className="card pad">
-                <p className="body-2">{tr('Add the checklist to track every step.', 'Добавь чек-лист, чтобы отслеживать каждый шаг.')}</p>
+                <p className="body-2">{tr('Add the checklist to track every step.', 'Добавь чек-лист, чтобы отслеживать каждый шаг.', '체크리스트를 추가하면 모든 단계를 챙길 수 있어요.')}</p>
                 <button type="button" className="btn btn--primary" onClick={() => plan.start()}>
-                  {tr('Add the checklist', 'Добавить чек-лист')}
+                  {tr('Add the checklist', 'Добавить чек-лист', '체크리스트 추가')}
                 </button>
               </div>
             )}
@@ -130,11 +132,11 @@ export default function MyPlan() {
                           <div className="check-item__side">
                             {c.guide && (
                               <Link to={`/guides/${c.guide}`} className="link link--sm">
-                                {tr('Guide', 'Гайд')}
+                                {tr('Guide', 'Гайд', '가이드')}
                               </Link>
                             )}
                             <label className="date">
-                              <span className="sr-only">{tr('My target date', 'Моя целевая дата')}</span>
+                              <span className="sr-only">{tr('My target date', 'Моя целевая дата', '목표 날짜')}</span>
                               <input type="date" value={state.dates[c.id] ?? ''} onChange={(e) => plan.setDate(c.id, e.target.value)} />
                             </label>
                           </div>
@@ -150,7 +152,7 @@ export default function MyPlan() {
           <aside className="plan__side">
             <section className="card pad">
               <h2 className="h4">
-                {tr('Saved universities', 'Сохранённые вузы')} <span className="muted">{saved.length}</span>
+                {tr('Saved universities', 'Сохранённые вузы', '저장한 대학')} <span className="muted">{saved.length}</span>
               </h2>
               {saved.length ? (
                 <ul className="saved">
@@ -165,7 +167,7 @@ export default function MyPlan() {
                           <span className="muted">{hostOf(u.website)}</span>
                         </span>
                       </Link>
-                      <button type="button" className="icon-btn icon-btn--sm" onClick={() => plan.toggleSaved(u.slug)} aria-label={tr(`Remove ${u.name}`, `Убрать ${u.name}`)}>
+                      <button type="button" className="icon-btn icon-btn--sm" onClick={() => plan.toggleSaved(u.slug)} aria-label={tr(`Remove ${u.name}`, `Убрать ${u.name}`, `${u.name} 삭제`)}>
                         <X size={16} />
                       </button>
                     </li>
@@ -173,30 +175,32 @@ export default function MyPlan() {
                 </ul>
               ) : (
                 <p className="body-2 muted">
-                  <Bookmark size={14} aria-hidden="true" /> {tr('Nothing saved yet.', 'Пока ничего не сохранено.')}
+                  <Bookmark size={14} aria-hidden="true" /> {tr('Nothing saved yet.', 'Пока ничего не сохранено.', '아직 저장한 대학이 없어요.')}
                 </p>
               )}
               <Link to="/universities" className="link link--arrow">
-                {tr('Find universities', 'Найти вузы')} <ArrowRight size={16} aria-hidden="true" />
+                {tr('Find universities', 'Найти вузы', '대학 찾기')}
               </Link>
             </section>
 
             <section className="card pad">
-              <h2 className="h4">{tr('Where this is stored', 'Где это хранится')}</h2>
+              <h2 className="h4">{tr('Where this is stored', 'Где это хранится', '저장 위치')}</h2>
               <p className="body-2">
                 {plan.isPersisted()
                   ? tr(
                       'Your plan is saved in this browser. Clearing browser data will remove it.',
                       'План сохранён в этом браузере. При очистке данных браузера он может быть потерян.',
+                      '계획은 이 브라우저에 저장돼요. 브라우저 데이터를 지우면 함께 사라져요.',
                     )
                   : tr(
                       'This browser blocks local storage, so the plan will be lost when you close the tab.',
                       'Этот браузер блокирует локальное хранилище — план пропадёт после закрытия вкладки.',
+                      '이 브라우저는 로컬 저장소를 막고 있어요. 탭을 닫으면 계획이 사라져요.',
                     )}
               </p>
               <button type="button" className="btn btn--danger-ghost btn--sm" onClick={() => setConfirm(true)}>
                 <Trash2 size={16} aria-hidden="true" />
-                {tr('Clear plan', 'Очистить план')}
+                {tr('Clear plan', 'Очистить план', '계획 지우기')}
               </button>
             </section>
           </aside>
@@ -206,12 +210,12 @@ export default function MyPlan() {
       <Sheet
         open={confirm}
         onClose={() => setConfirm(false)}
-        title={tr('Clear your plan?', 'Очистить план?')}
+        title={tr('Clear your plan?', 'Очистить план?', '계획을 지울까요?')}
         variant="center"
         footer={
           <>
             <button type="button" className="btn btn--ghost" onClick={() => setConfirm(false)}>
-              {tr('Cancel', 'Отмена')}
+              {tr('Cancel', 'Отмена', '취소')}
             </button>
             <button
               type="button"
@@ -222,7 +226,7 @@ export default function MyPlan() {
               }}
             >
               <RotateCcw size={16} aria-hidden="true" />
-              {tr('Clear everything', 'Очистить всё')}
+              {tr('Clear everything', 'Очистить всё', '모두 지우기')}
             </button>
           </>
         }
@@ -231,6 +235,7 @@ export default function MyPlan() {
           {tr(
             'Ticked steps, dates and saved universities will be removed from this browser. This can’t be undone.',
             'Отмеченные шаги, даты и сохранённые вузы будут удалены из этого браузера. Отменить нельзя.',
+            '체크한 단계, 날짜, 저장한 대학이 이 브라우저에서 지워져요. 되돌릴 수 없어요.',
           )}
         </p>
       </Sheet>

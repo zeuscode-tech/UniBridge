@@ -1,10 +1,13 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
 import { readJSON, writeJSON } from './storage';
 
-export type Locale = 'en' | 'ru';
+export type Locale = 'en' | 'ru' | 'ko';
 export type Direction = 'kg-kr' | 'kr-kg';
-/** A string in every supported locale. */
-export type L = { en: string; ru: string };
+/**
+ * A string in the supported locales. Korean is optional while the translation
+ * grows: a missing `ko` falls back to English.
+ */
+export type L = { en: string; ru: string; ko?: string };
 
 interface Prefs {
   locale: Locale;
@@ -12,8 +15,8 @@ interface Prefs {
   direction: Direction;
   setDirection: (d: Direction) => void;
   toggleDirection: () => void;
-  /** Pick the string for the current locale. */
-  tr: (en: string, ru: string) => string;
+  /** Pick the string for the current locale; Korean falls back to English. */
+  tr: (en: string, ru: string, ko?: string) => string;
   /** Same, for a content object. */
   l: (value: L) => string;
 }
@@ -22,9 +25,10 @@ const PrefsContext = createContext<Prefs | null>(null);
 
 function initialLocale(): Locale {
   const saved = readJSON<Locale | null>('ub.locale', null);
-  if (saved === 'en' || saved === 'ru') return saved;
+  if (saved === 'en' || saved === 'ru' || saved === 'ko') return saved;
   // Language follows the browser. The study country never does (spec §1.2).
   const nav = typeof navigator !== 'undefined' ? navigator.language.toLowerCase() : 'en';
+  if (nav.startsWith('ko')) return 'ko';
   return nav.startsWith('ru') || nav.startsWith('ky') ? 'ru' : 'en';
 }
 
@@ -58,8 +62,8 @@ export function PrefsProvider({ children }: { children: ReactNode }) {
       direction,
       setDirection,
       toggleDirection: () => setDirection(direction === 'kg-kr' ? 'kr-kg' : 'kg-kr'),
-      tr: (en, ru) => (locale === 'ru' ? ru : en),
-      l: (v) => v[locale],
+      tr: (en, ru, ko) => (locale === 'ru' ? ru : locale === 'ko' ? ko ?? en : en),
+      l: (v) => (locale === 'ko' ? v.ko ?? v.en : v[locale]),
     }),
     [locale, direction, setLocale, setDirection],
   );
@@ -75,6 +79,7 @@ export function usePrefs() {
 
 /** "1 university / 3 universities" and "1 вуз / 3 вуза / 5 вузов". */
 export function plural(locale: Locale, n: number, en: [string, string], ru: [string, string, string]) {
+  if (locale === 'ko') return en[1];
   if (locale === 'en') return n === 1 ? en[0] : en[1];
   const m10 = n % 10;
   const m100 = n % 100;

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Bookmark, BookmarkCheck, MapPin } from 'lucide-react';
 import { usePrefs } from '../state/prefs';
 import { plan, usePlan } from '../state/plan';
-import { TYPE_LABEL, type University } from '../data/universities';
+import { AFFILIATION_LABEL, TYPE_LABEL, type University } from '../data/universities';
 import { StatusBadge } from './ui';
 
 /**
@@ -10,7 +10,7 @@ import { StatusBadge } from './ui';
  * Instead each one gets a typographic cover built from its own name.
  */
 export function UniCover({ uni, size = 'card' }: { uni: University; size?: 'card' | 'hero' }) {
-  const { l } = usePrefs();
+  const { tr, l } = usePrefs();
   return (
     <div className={`unicover unicover--${uni.tone} unicover--${size}`} aria-hidden="true">
       <svg className="unicover__arc" viewBox="0 0 400 200" preserveAspectRatio="none">
@@ -19,8 +19,8 @@ export function UniCover({ uni, size = 'card' }: { uni: University; size?: 'card
       </svg>
       <span className={`unicover__mark${uni.country === 'KR' ? ' unicover__mark--kr' : ''}`}>{uni.monogram}</span>
       <span className="unicover__meta">
-        {uni.country === 'KR' ? 'KR' : 'KG'} · {l(uni.city)}
-        {uni.founded ? ` · ${uni.founded}` : ''}
+        {l(uni.city)}, {uni.country === 'KR' ? 'KR' : 'KG'}
+        {uni.founded ? `, ${tr(`est. ${uni.founded}`, `осн. ${uni.founded}`, `${uni.founded}년 설립`)}` : ''}
       </span>
     </div>
   );
@@ -39,10 +39,15 @@ export function UniversityCard({ uni }: { uni: University }) {
       <div className="unicard__body">
         <p className="unicard__where">
           <MapPin size={14} aria-hidden="true" />
-          {l(uni.city)}, {uni.country === 'KR' ? tr('South Korea', 'Южная Корея') : tr('Kyrgyzstan', 'Кыргызстан')}
+          {l(uni.city)}, {uni.country === 'KR' ? tr('South Korea', 'Южная Корея', '한국') : tr('Kyrgyzstan', 'Кыргызстан', '키르기스스탄')}
           <span className="dot" aria-hidden="true" />
           {l(TYPE_LABEL[uni.type])}
         </p>
+        {uni.affiliation && (
+          <p className="unicard__affil">
+            <span className="tag tag--soft">{l(AFFILIATION_LABEL[uni.affiliation])}</span>
+          </p>
+        )}
         <h3 className="unicard__name">
           <Link to={`/universities/${uni.slug}`} className="stretched">
             {uni.name}
@@ -53,12 +58,12 @@ export function UniversityCard({ uni }: { uni: University }) {
         </p>
         <dl className="unicard__facts">
           <div>
-            <dt>{tr('Levels', 'Уровни')}</dt>
-            <dd className="muted">{tr('Not specified', 'Не указано')}</dd>
+            <dt>{tr('Levels', 'Уровни', '과정')}</dt>
+            <dd className="muted">{tr('Not specified', 'Не указано', '정보 없음')}</dd>
           </div>
           <div>
-            <dt>{tr('Languages', 'Языки')}</dt>
-            <dd className="muted">{tr('Not specified', 'Не указано')}</dd>
+            <dt>{tr('Languages', 'Языки', '언어')}</dt>
+            <dd className="muted">{tr('Not specified', 'Не указано', '정보 없음')}</dd>
           </div>
         </dl>
         <div className="unicard__foot">
@@ -70,7 +75,7 @@ export function UniversityCard({ uni }: { uni: University }) {
             onClick={() => plan.toggleSaved(uni.slug)}
           >
             {isSaved ? <BookmarkCheck size={16} /> : <Bookmark size={16} />}
-            {isSaved ? tr('In my plan', 'В плане') : tr('Add to plan', 'В план')}
+            {isSaved ? tr('In my plan', 'В плане', '내 계획에 있음') : tr('Add to plan', 'В план', '계획에 추가')}
           </button>
         </div>
       </div>
