@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight, ChevronRight, CircleDashed, CircleHelp, ShieldCheck } from 'lucide-react';
 import { usePrefs } from '../state/prefs';
+import logoMark from '../assets/unibridge-logo.svg';
 import type { ContentStatus } from '../data/universities';
 
 /* ------------------------------------------------------------------ Logo */
@@ -9,12 +10,7 @@ import type { ContentStatus } from '../data/universities';
 export function Logo({ inverse = false }: { inverse?: boolean }) {
   return (
     <span className={`logo${inverse ? ' logo--inverse' : ''}`}>
-      <svg className="logo__mark" viewBox="0 0 32 32" aria-hidden="true">
-        <rect width="32" height="32" rx="9" />
-        <path d="M6.5 21.5C9 14 12.4 10.5 16 10.5s7 3.5 9.5 11" fill="none" strokeWidth="2.4" strokeLinecap="round" />
-        <path d="M5 21.5h22" strokeWidth="2.4" strokeLinecap="round" />
-        <path d="M11.5 15.6v5.9M16 13.2v8.3M20.5 15.6v5.9" strokeOpacity=".7" strokeWidth="1.5" strokeLinecap="round" />
-      </svg>
+      <img className="logo__mark" src={logoMark} alt="" width={58} height={40} />
       <span className="logo__word">UniBridge</span>
     </span>
   );
