@@ -1,30 +1,45 @@
-# Roadmap and initial backlog
+# Roadmap and backlog
 
-> Planning targets, not completed milestones. Subject to revision after research.
+> Honest status as of 23 Nov 2026. A box is ticked only when the work exists in this repository.
 
-## Until 24 November 2026 — interim meeting
-- [ ] Decide on comparable university sources in both countries.
-- [ ] Finalize research criteria and a comparison sheet.
-- [ ] Complete a small set of interviews, if consent and access permit.
-- [ ] Write a one-page problem statement with limitations.
-- [ ] Define MVP scope and map one critical user journey.
-- [ ] Prepare 3–5 wireframes and a clickable prototype.
-- [ ] Prepare a short English interim presentation.
+## Until 24 November 2026: interim meeting
 
-## December 2026 — proposed MVP
-- [ ] Initialize Expo application.
-- [ ] Implement home, guide, and checklist navigation.
-- [ ] Add a small, reviewed content catalog with references.
-- [ ] Check accessibility, localization, and basic usability.
-- [ ] Test with volunteer users and address highest-priority issues.
-- [ ] Decide whether a backend is genuinely needed.
+- [x] Choose the universities to compare (Salymbekov University and the Korean HUSS / MoU partners; see [DECISIONS.md](DECISIONS.md)).
+- [x] Write a one-page problem statement with limitations ([research/PROBLEM_STATEMENT.md](research/PROBLEM_STATEMENT.md)).
+- [x] Build a source list ([research/SOURCES.md](research/SOURCES.md)).
+- [x] Draft the comparison matrix with the five criteria ([research/COMPARISON_MATRIX.md](research/COMPARISON_MATRIX.md)).
+- [x] Fact-check every Life Translator card and record the result ([research/FACT_CHECK_2026-11-23.md](research/FACT_CHECK_2026-11-23.md)).
+- [x] Review existing services and competitors ([research/COMPETITORS.md](research/COMPETITORS.md)).
+- [x] Clickable web prototype with Life Translator on GitHub Pages, in English, Russian and Korean.
+- [x] Prepare the 5-minute interim talk ([PRESENTATION_OUTLINE.md](PRESENTATION_OUTLINE.md)).
+- [ ] **Interviews with students: not done.** No interviews or surveys have been run.
+- [ ] **Usability tests: not done.**
+- [ ] Korean texts proofread by a native speaker: not done.
 
-## January 2027 — capstone wrap-up
-- [ ] Refine prototype based on evidence.
-- [ ] Summarize Kyrgyzstan / South Korea findings accurately.
-- [ ] Document test results and known limitations.
-- [ ] Demonstrate the working scope achieved.
-- [ ] Prepare final presentation for the proposed 25–29 January period.
+## Week 1 after the meeting
+
+- [ ] Test on a real phone: K.Ride sign-up with a +996 number, English mode of Naver Map and KakaoMap, Karrot, Coupang Eats.
+- [ ] Find sources for the T-money, convenience store, AirKorea and Open Chat claims.
+
+## Weeks 2–4
+
+- [ ] Read the primary text of Kyrgyz Resolution No. 600 (registration) and resolve the contradiction with the 21 Nov 2026 statement.
+- [ ] Open the KIHASA and KCUE reports and the KoreaScience paper for survey data on everyday barriers; take per-university international student counts from 대학알리미.
+- [ ] Run 5–10 interviews with Kyrgyz students in Korea and Korean students in Bishkek (with consent; raw notes stay outside the repository).
+- [ ] Self-check the site against the 33 KWCAG 2.2 items. We will not claim certification.
+- [ ] Page-by-page audit of the university orientation pages, including a click count from the home page.
+
+## December 2026: MVP
+
+- [ ] Decide whether to keep the web app or move to Expo, based on interview results.
+- [ ] Usability test with about 5 students: tasks, time, success rate.
+- [ ] Order of steps for the first days ("what you can do with a passport on day one, what needs an ARC").
+
+## January 2027: final
+
+- [ ] Findings Korea vs Kyrgyzstan and 3–5 recommendations to universities.
+- [ ] Final presentation and a short demo video (final meeting proposed for 25–29 Jan 2027).
 
 ## Backlog principles
-Keep tasks small; attach evidence for any claims; do not implement unvalidated AI features before core guides are useful.
+
+Keep tasks small; attach evidence to every claim; do not build unvalidated AI features before the core guides are useful.

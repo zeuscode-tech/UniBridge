@@ -2,41 +2,45 @@
 
 **Digital assistant for international students** · HUSS Global Capstone Design project concept
 
-> **Status:** Planning / discovery (November 2026). This repository contains proposed designs and documentation, not a released application. No interviews, usability tests, university integrations, or working AI assistant are claimed as completed.
+> **Status (23 Nov 2026):** desk research and a working web prototype. **Live:** <https://zeuscode-tech.github.io/UniBridge/> · Life Translator: <https://zeuscode-tech.github.io/UniBridge/#/life>. No interviews, surveys or usability tests have been done yet, and there is no AI assistant.
 
 ## Problem
 
-Students moving to a new country can struggle to locate clear, up-to-date information about university onboarding, accommodation, campus services, transportation, and urgent contacts. Useful information may be fragmented across websites, PDF guides, and different languages.
+New international students need clear, current information for their first weeks: taxi, transport card, bank, SIM, registration, insurance, emergency numbers. In both Korea and Kyrgyzstan this information is scattered, often not in a language the newcomer reads, and changes every few months. In Korea, 50.1% of international students are below the recommended language level ([Korea JoongAng Daily](https://www.koreajoongangdaily.com/korea/korean-universities-race-to-attract-international-students-but-fail-to-retain-them/12529877)) and university dropout rose to 7.1% in 2024 ([Korea Times](https://www.koreatimes.co.kr/amp/southkorea/education/20250722/do-korean-universities-really-understand-what-international-students-need)); in Kyrgyzstan, student visas fell about fourfold in 2025 ([24.kg](https://24.kg/english/347565_Foreign_students_leaving_Kyrgyzstan_Number_of_visas_drops_fourfold)). Details and sources: [problem statement](docs/research/PROBLEM_STATEMENT.md).
 
-## Proposed solution
+## What exists now
 
-UniBridge is a proposed multilingual mobile guide for incoming international students in Kyrgyzstan and South Korea. The team will first validate the problem, compare university orientation resources in both countries, and then build a small prototype addressing the most important validated needs.
+**Life Translator / 생활 번역기** translates everyday life, not words. Pick the app you use at home and see what replaces it in the other country, what you need to start, and where the barriers are:
 
-### Candidate features (not yet implemented)
+- 19 everyday needs, both directions (KG → KR and KR → KG), search in English, Russian and Hangul.
+- Every card has a status, a check date (23 Nov 2026) and its sources. Where no equivalent exists, the card is marked as a **barrier**; these feed the comparison matrix.
+- Interface in English, Russian and Korean. The Korean texts have not yet been proofread by a native speaker.
+- University catalogue led by Salymbekov University and the Korean HUSS and MoU partner universities; a first-weeks checklist saved in the browser; QR code and share link for phones.
 
-- **First-weeks checklist:** key onboarding steps, sourced from verified university guidance.
-- **Campus & life guide:** essential university, accommodation, transport, and emergency information.
-- **Multilingual content:** start with English; consider Russian and Korean where content can be maintained accurately.
-- **Search / FAQ:** simple, source-linked answers to common onboarding questions.
-- **AI assistant (stretch goal):** question answering grounded in approved documents, with visible source links and uncertainty handling.
+The web prototype is static (Vite + React + TypeScript, hash routing) and deploys to GitHub Pages on every push to `main`. See [web/README.md](web/README.md).
 
-## Capstone research component
+## Research
 
-The proposed research will compare orientation resources from one university in Kyrgyzstan and one in South Korea, using consistent criteria such as findability, language accessibility, completeness, clarity, and usability. Limited voluntary interviews and prototype feedback may supplement public information if feasible.
+- [Problem statement](docs/research/PROBLEM_STATEMENT.md): who, what barrier, evidence, limitations.
+- [Comparison matrix](docs/research/COMPARISON_MATRIX.md): five criteria (findability, clarity, language accessibility, completeness, actionability), scored only where there is evidence.
+- [Fact-check of 23 Nov 2026](docs/research/FACT_CHECK_2026-11-23.md): what we got wrong and corrected.
+- [Competitors](docs/research/COMPETITORS.md): nothing maps apps in both directions between Korea and Kyrgyzstan.
+- [Sources](docs/research/SOURCES.md): every link we used.
 
-This is a proposal, not an assertion that research has already been performed.
+All of this is desk research. Interviews and usability tests are planned, not done ([roadmap](docs/ROADMAP.md)).
 
-## Milestones (planning targets)
+## Milestones
 
-| Date | Target deliverable | Status |
+| Date | Deliverable | Status |
 | --- | --- | --- |
-| By 24 Nov 2026 | Defined problem, initial comparison, UX flow, clickable prototype, interim presentation | Planned |
-| Dec 2026 | Small mobile MVP with curated content and core navigation | Planned |
-| 25–29 Jan 2027 | Final capstone presentation, tested prototype and findings | Planned |
+| 24 Nov 2026 | Problem statement, sources, draft comparison, web prototype, 5-minute interim talk | Done, except interviews |
+| Dec 2026 | Interviews, usability test, MVP decision (web or Expo) | Planned |
+| 25–29 Jan 2027 | Final presentation with findings and recommendations | Planned |
 
-## Potential technology stack
+## Technology
 
-- **Mobile:** React Native + Expo
+- **Now:** static web app, Vite + React 18 + TypeScript, GitHub Pages
+- **Mobile (later, if interviews support it):** React Native + Expo
 - **Backend (if needed):** Python + FastAPI
 - **Database (if needed):** PostgreSQL
 - **Design:** Figma
@@ -46,14 +50,15 @@ The stack and MVP scope may change after user discovery. No production systems o
 
 ## Documentation
 
-- [Web prototype](web/README.md) — clickable web prototype built from the Figma designs (content not yet verified)
+- [Web prototype](web/README.md)
+- [Research](docs/research/)
 - [Project brief](docs/PROJECT_BRIEF.md)
 - [Research plan](docs/RESEARCH_PLAN.md)
 - [MVP scope](docs/MVP_SCOPE.md)
 - [User flows](docs/USER_FLOWS.md)
 - [Proposed architecture](docs/ARCHITECTURE.md)
 - [Roadmap and backlog](docs/ROADMAP.md)
-- [Interim presentation outline](docs/PRESENTATION_OUTLINE.md)
+- [Interim presentation: 5-minute script](docs/PRESENTATION_OUTLINE.md)
 - [Privacy and safety](docs/PRIVACY_AND_SECURITY.md)
 - [Decisions and open questions](docs/DECISIONS.md)
 - [Русская версия](README.ru.md)

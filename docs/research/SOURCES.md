@@ -1,0 +1,337 @@
+# Sources
+
+All sources used for the UniBridge desk research and the Life Translator fact-check. Every link was opened or found by the team on or before **23 Nov 2026**; nothing here comes from interviews or surveys, because none have been run yet.
+
+How to read this list:
+
+- **Official** sources (ministries, immigration services, universities, app stores) are preferred. Many Kyrgyz facts come from local media that quote ministries (kaktus.media, 24.kg, economist.kg), because primary government pages were hard to find.
+- Blogs and aggregators are listed only where they were used to show what *other* guides say (see [COMPETITORS.md](COMPETITORS.md)), never as the only proof of a fact.
+- Where a source was found but not opened, the documents that use it say so.
+
+308 unique links, grouped by topic. A link is listed once, under the topic where it is first used.
+
+## Korea: everyday services (fact-check)
+
+- Asiae, 27 Mar 2025: <https://view.asiae.co.kr/en/article/2025032721290024060>
+- Asiae, 4 Jun 2024: <https://www.asiae.co.kr/en/article/2024060408155574996>
+- Asiae, 5 Oct 2023: <https://www.asiae.co.kr/en/article/2023100509481063437>
+- LiveAnywhere blog: <https://blog.liveanywhere.me/183765>
+- HaniSeoul: <https://www.haniseoul.com/travels/korea/kakao-t-foreign-card-error-troubleshooting>
+- App Store: Kakao T: <https://apps.apple.com/sg/app/kakao-t/id981110422>
+- Korea Times, 27 Feb 2026: <https://www.koreatimes.co.kr/business/companies/20260227/korea-conditionally-approves-google-request-to-export-map-data>
+- TechCrunch: <https://techcrunch.com/2026/02/27/south-korea-opens-the-door-to-let-google-maps-operate-fully>
+- Korea Herald: <https://www.koreaherald.com/article/10851560>
+- Asia News Network: <https://asianews.network/google-builds-south-korea-team-for-full-functioning-maps-service/>
+- Wikipedia: Map platforms in South Korea: <https://en.wikipedia.org/wiki/Map_platforms_in_South_Korea>
+- Toss Feed: <https://toss.im/tossfeed/article/korealifehacks-7-en>
+- Daum / Korea JoongAng Daily: <https://v.daum.net/v/20250312222108716>
+- Korea JoongAng Daily, 12 Oct 2026: <https://www.koreajoongangdaily.com/business/kakaobank-opens-app-to-foreign-residents-enabling-remote-account-opening/12914315>
+- Korea Times, 12 Oct 2026: <https://www.koreatimes.co.kr/business/banking-finance/20261012/less-paperwork-ai-powered-banking-kakaobank-joins-race-for-foreign-customers>
+- FSC: <https://fsc.go.kr/eng/pr010101/84215?curPage=3>
+- Korea Times, 22 Jul 2025: <https://www.koreatimes.co.kr/amp/southkorea/education/20250722/do-korean-universities-really-understand-what-international-students-need>
+- Quartr, Kakao Q2 2025: <https://quartr.com/events/kakao-corp-035720-q2-2025_FPFNdlB8>
+- Toss Feed (SIM): <https://toss.im/tossfeed/article/korealifehacks-9-en>
+- SeoulStart: Karrot: <https://seoulstart.com/guides/karrot-danggeun-guide>
+- Korea Herald: <https://www.koreaherald.com/article/10593298>
+- App Store: Naver Papago: <https://apps.apple.com/us/app/id1147874819?l=en-us>
+- machinetranslate.org: <https://machinetranslate.org/papago>
+- Trip.com (says 16 languages): <https://sg.trip.com/guide/transport/travel-apps-for-south-korea.html>
+- Google blog: <https://blog.google/products/translate/from-amharic-to-xhosa-introducing/>
+- 10mag: <https://10mag.com/how-to-use-coupang-in-korea-english-guide-for-foreigners/>
+- Daum, 6 May 2025: <https://v.daum.net/v/20250506123752477>
+- Daum, 29 Jul 2025: <https://v.daum.net/v/20250729165547671>
+- Korea Times, 29 Jul 2026: <https://koreatimes.co.kr/lifestyle/travel-food/20260729/seoul-simplifies-food-delivery-apps-for-international-visitors>
+- Daum / News1: <https://v.daum.net/v/KpQRCnVZut>
+- SeoulStart: <https://seoulstart.com/guides/korea-food-delivery-apps-guide>
+- Visas Korea: <https://www.visaskorea.com/korea-food-delivery-guide-en/>
+- Sogang OIA: <https://oisaen.sogang.ac.kr/oisaen/1406/subview.do>
+- Yonsei: <https://ged.yonsei.ac.kr/yiec_en/info/foreigners_registration.do>
+- SNU OGA: <https://oga.snu.ac.kr/node/193>
+- Hongik guidebook: <https://sites.google.com/hongik.ac.kr/guidebook/english/5-application-for-alien-registration-card>
+- MOJ press release: <https://www.moj.go.kr/bbs/immigration_eng/229/591273/artclView.do>
+- MOJ explainer: <https://www.moj.go.kr/bbs/immigration_eng/229/591100/artclView.do>
+- MOJ, 2023: <https://moj.go.kr/bbs/immigration_eng/229/575311/artclView.do>
+- Study in Korea: <https://cdn.studyinkorea.go.kr/ko/study/ForeignAlien.do>
+- Asiae, 2020: <https://www.asiae.co.kr/en/article/2020052010134720515>
+- SeoulStart: <https://seoulstart.com/guides/korea-government-apps-guide>
+- MOJ notice: <https://www.moj.go.kr/bbs/immigration/47/599157/artclView.do>
+- Incheon city: <https://www.incheon.go.kr/en/EN050212>
+- Sungshin, 6 Mar 2026: <https://sungshin.ac.kr/bbs/main_eng/4941/152421/artclView.do>
+- Hallym IAO: <https://dsai.hallym.ac.kr/iao/6570/subview.do>
+- Sogang OIA: <https://oisaen.sogang.ac.kr/oisaen/1426/subview.do>
+- Asiae, 2 Jul 2023: <https://www.asiae.co.kr/en/article/2023070201395607407>
+- The Star / Korea Herald, 25 Oct 2026: <https://www.thestar.com.my/aseanplus/aseanplus-news/2026/10/25/interpretation-gaps-in-south-korea039s-police-leave-foreigners-lost-in-translation>
+- Busan city: <https://www.busan.go.kr/eng/bsnews01/796823>
+- Asiae, 20 Apr 2023: <https://www.asiae.co.kr/en/article/2023042015115480769>
+- NZ Embassy Seoul: <https://www.mfat.govt.nz/en/countries-and-regions/asia/republic-of-korea-south/new-zealand-embassy/emergency-numbers-in-korea>
+- Immigration.go.kr 1345: <https://www.immigration.go.kr/immigration/1530/subview..do>
+- moj.go.kr mirror: <https://moj.go.kr/immigration/1530/subview.do>
+- UNHCR Help Korea: <https://help.unhcr.org/southkorea/services-in-korea/government-helpline-for-foreigners-in-korea/>
+- MOJ (option 1): <https://moj.go.kr/bbs/immigration/214/608238/artclView.do>
+- MOJ «A Must-know Hotline for Foreigners»: <https://www.moj.go.kr/bbs/moj/189/600164/artclView.do>
+- Ministry of Gender Equality and Family: <https://www.mogef.go.kr/cc/dcc/cc_dcc_f001.do>
+- Mokpo city: <https://www.mokpo.go.kr/eng/residents/family/danuri>
+- Korea Times, 16 Jun 2026: <https://www.koreatimes.co.kr/amp/southkorea/20260616/korea-expands-multilingual-lifeline-for-migrant-women-facing-violence>
+- liveinkorea.kr: <https://www.liveinkorea.kr/USA/index.do>
+- KOCIS webzine: <https://www.kocis.go.kr/eng/webzine/202008/sub09.html>
+- Asiae, 12 Nov 2025: <https://www.asiae.co.kr/en/article/2025111209302449389>
+- koreaworkexpert: <https://koreaworkexpert.com/how-to-open-korean-bank-account-foreigners-2026/>
+- lacha.co.kr: <https://lacha.co.kr/korea-guide/en/open-bank-account-foreigner-korea/>
+- koreaworkexpert: banking 2026: <https://koreaworkexpert.com/banking-in-korea-2026-a-complete-guide-to-opening-an-account-for-foreigners/>
+- livinginkorea.org: <https://www.livinginkorea.org/guide/banking-finance>
+
+## Kyrgyzstan: everyday services, visas and registration (fact-check)
+
+- App Store: Bi Taxi: <https://apps.apple.com/bm/app/id863005656?l=en-gb>
+- kaktus.media: CEO Namba One: <https://kaktus.media/doc/450881_ceo_namba_one:_my_legko_ybedili_bakay_bank_profinansirovat_elektrotaksi_namba_way.html>
+- kaktus.media: Namba Way: <https://kaktus.media/doc/450256_namba_way_sovmestno_s_bakay_bankom_zapystila_pervye_v_kyrgyzstane_taksi_elektrokary.html>
+- kaktus.media: Yandex Go 2025: <https://kaktus.media/doc/537048_bolee_22_mlrd_somov_sostavil_dohod_parkov_partnerov_iandeks_go_i_ih_voditeley_v_2025_gody.html>
+- economist.kg, 12 Oct 2026: <https://economist.kg/biznes/2026/10/12/yandex-go-vosstanavlivaet-rabotu/>
+- kaktus.media: WB Taxi: <https://kaktus.media/doc/546782_wb_taxi_vyhodit_na_massovyy_rynok_bishkeka.html>
+- WE project: <https://weproject.media/en/articles/detail/5-taxi-services-in-bishkek-with-high-comfort-and-safety-levels/>
+- kaktus.media, 25 Sep 2024: <https://kaktus.media/doc/509975_vsia_strana_na_odnoy_karte_v_2gis_poiavilas_detalnaia_karta_vsego_kyrgyzstana.html>
+- kaktus.media: 2GIS entrances by flat number: <https://kaktus.media/doc/375506_2gis:_teper_nayti_nyjnyy_podezd_mojno_po_kvartire.html>
+- App Store: 2GIS: <https://apps.apple.com/ru/app/2%D0%B3%D0%B8%D1%81-%D1%82%D0%BE%D1%87%D0%BD%D1%8B%D0%B5-%D0%BE%D1%84%D0%BB%D0%B0%D0%B9%D0%BD-%D0%BA%D0%B0%D1%80%D1%82%D1%8B/id481627348>
+- kaktus.media, 29 Jan 2024: <https://kaktus.media/doc/494761_s_30_ianvaria_proezd_v_bishkekskom_transporte_podorojaet._kak_i_chem_platit.html>
+- 24.kg, 22 May 2026: <https://24.kg/obschestvo/374943_oplatu_proezda_nalichnyimi_vavtobusah_bishkeka_otmenyat_s1iyulya/>
+- 24.kg, 30 Jun 2026: <https://24.kg/obschestvo/380138_peresadki_vtechenie_chasa_vavtobusah_bishkeka_budut_besplatnyimi/>
+- kaktus.media, 3 Jun 2026: <https://kaktus.media/doc/547278_pomnite_chto_sistemy_oplaty_v_avtobysah_hotiat_izmenit_dokyment_vynesli_na_obsyjdenie.html>
+- 24.kg: night fare: <https://24.kg/obschestvo/380438_nochnoy_tarif_vavtobusah_bishkeka_sostavit_70-90_somov/amp/>
+- kaktus.media: QR: <https://kaktus.media/doc/521146_bishkekchane_jalyutsia_na_problemy_pri_oplate_za_proezd_cherez_qr_kod._v_chem_delo.html>
+- kaktus.media: where to buy a Tulpar card: <https://kaktus.media/doc/462750_beznalichnaia_oplata_proezda:_gde_priobresti_i_kak_popolnit_karty_tylpar.html>
+- kaktus.media: QR payment on suburban routes: <https://kaktus.media/doc/548403_na_prigorodnyh_marshrytah_bishkeka_testiryut_oplaty_proezda_po_qr_kodam.html>
+- Bankwatch, Apr 2026 (PDF): <https://bankwatch.org/wp-content/uploads/2026/04/More-buses-but-is-the-system-better_-Analysis-of-the-public-transport-network-in-Bishkek.pdf>
+- kaktus.media: ELQR in six years: <https://kaktus.media/doc/541373_kak_elqr_za_6_let_perestroila_platejnyy_rynok_kyrgyzstana.html>
+- economist.kg, 2 Mar 2026: <https://economist.kg/novosti-kompanii/2026/03/02/qr-vmiesto-nalichnykh-kak-elqr-za-6-liet-pieriestroil-platiezhnyi-rynok-kyrghyzstana/>
+- kaktus.media: QR payments of 908.6 bn som in 2025: <https://kaktus.media/doc/539572_v_2025_gody_cherez_qr_kod_provedeno_platejey_na_9086_mlrd_somov.html>
+- Akchabar: ELQR turnover above 1 trillion som: <https://www.akchabar.kg/en/news/oborot-qr-platezhej-v-sisteme-elqr-previsil-1-trln-somov-omwmpextwapmagqn>
+- kaktus.media: Alipay+: <https://kaktus.media/546761>
+- kaktus.media: Tunduk inside MBank: <https://kaktus.media/doc/489270_cifrovye_dokymenty_i_gosyslygi_tyndyk_teper_v_mbank.html>
+- mbank.kg: archived non-resident tariffs (PDF): <https://mbank.kg/media/documents/%D0%90%D1%80%D1%85%D0%B8%D0%B2%D0%BD%D1%8B%D0%B5_%D1%82%D0%B0%D1%80%D0%B8%D1%84%D1%8B_%D0%B4%D0%BB%D1%8F_%D0%BD%D0%B5%D1%80%D0%B5%D0%B7%D0%B8%D0%B4%D0%B5%D0%BD%D1%82%D0%BE%D0%B2.pdf>
+- kaktus.media, 2022: <https://kaktus.media/doc/457108_kak_inostrancy_polychit_karty_v_kyrgyzstanskom_banke_ysloviia_ceny_sroki.html>
+- visasam.ru (blog): <https://visasam.ru/samotur/finansy/karta-mbank.html>
+- economist.kg: cross-border QR payments: <https://economist.kg/banki/2026/10/28/transgranichnye-qr-platezhi-5-stran.md>
+- CABAR / Central Asia Barometer: <https://ca-barometer.org/ru/publications/which-messaging-apps-are-popular-in-uzbekistan-kyrgyzstan-and-kazakhstan>
+- kaktus.media: Digital 2026: <https://kaktus.media/537934>
+- kaktus.media, 18 Mar 2024: <https://kaktus.media/doc/497733_novye_pravila_registracii_sim_kart_v_kyrgyzstane._otvety_na_popyliarnye_voprosy_abonentov.html>
+- kaktus.media: Beeline: <https://kaktus.media/doc/498870_registraciia_sim_karty_v_mobilnom_prilojenii:_podrobnoe_rykovodstvo_i_bonys_ot_beeline.html>
+- economist.kg, 15 Jul 2026: <https://economist.kg/novosti-kompanii/2026/07/15/esim-o-dlya-inostrantsev-po-pasportu/>
+- kaktus.media: O! for foreigners: <https://kaktus.media/doc/549742_sviaz_o_dlia_inostrancev:_esim_onlayn_ili_sim_karta_po_pasporty_luboy_strany.html>
+- kaktus.media: Ozon: <https://kaktus.media/doc/482953_ozon_zapystil_prodaji_dlia_jiteley_kyrgyzstana.html>
+- economist.kg, 5 Mar 2024: <https://economist.kg/biznes/2024/03/05/markietplieis-ozon-zapustil-sobstviennuiu-kurierskuiu-dostavku-v-kyrghyzstanie.md>
+- docs.ozon.ru: <https://docs.ozon.ru/common/dostavka/dostavka-iz-za-rubeyoa/>
+- economist.kg, 28 Oct 2026: <https://economist.kg/novosti-kompanii/2026/10/28/pvz-wildberries-kyrgyzstan/>
+- kaktus.media: Wildberries inside Kyrgyzstan: <https://kaktus.media/doc/548996_prodaji_na_wildberries_vnytri_kyrgyzstana:_kak_predprinimateliam_vyyti_v_onlayn_riteyl.html>
+- lalafo.kg: <https://lalafo.kg/>
+- Glovo: <https://glovoapp.com/ky/kg/bishkek/stores/glovo-express-bsk>
+- economist.kg, 20 Mar 2025: <https://economist.kg/novosti-kompanii/2025/03/20/glovo-express-piervyi-darkstor-v-kyrghyzstanie-nabiraiet-oboroty.md>
+- kaktus.media: second Glovo micro-fulfilment centre: <https://kaktus.media/doc/537283_glovo_yskoriaet_dostavky:_v_bishkeke_otkrylsia_vtoroy_kryglosytochnyy_mikro_fylfilment_centr.html>
+- 24.kg: <https://24.kg/obschestvo/289001_vbishkeke_nachal_rabotu_servis_zakaza_edyi_otyandeksGo/>
+- kaktus.media: <https://kaktus.media/doc/497500_v_bishkeke_zapystilsia_servis_zakaza_edy_ot_iandeks_go.html>
+- economist.kg: Globus: <https://economist.kg/novosti-kompanii/2025/03/20/10-liet-globus-ot-piervogho-ghipiermarkieta-do-krupnieishiei-sieti-v-kyrghyzstanie.md>
+- 24.kg: Umai: <https://24.kg/biznes_info/244584_umay_grupp_podderjka_otechestvennogo_proizvoditelya_istabilizatsiya_tsen/amp/>
+- economist.kg: Umai 2025: <https://economist.kg/novosti-kompanii/2025/12/31/tsifry-i-nie-tolko-umai-group-o-ghlavnykh-itoghakh-ukhodiashchiegho-ghoda.md>
+- kaktus.media: Narodnyi rebranding: <https://kaktus.media/doc/398359_narodnyy_predstanet_v_novom_cvete_set_magazinov_provodit_masshtabnyy_rebrending.html>
+- economist.kg, 2019: <https://economist.kg/novosti/2019/08/09/magaziny-globus-frunze-i-narodnyj-rabotajut-v-shtatnom-rezhime-nochju-prishlos-zakryvat-dlya-bezopasnosti-sotrudnikov/>
+- kaktus.media: Dostor: <https://kaktus.media/doc/471357_dostor._srazy_tri_magazina_s_dryjelubnymi_cenami_otkryvautsia_v_bishkeke.html>
+- kaktus.media, 31 Dec 2025: <https://kaktus.media/doc/538103_v_kyrgyzstane_izmenen_poriadok_bezvizovogo_prebyvaniia_dlia_grajdan_55_stran.html>
+- Wikipedia: Visa policy of Kyrgyzstan: <https://en.wikipedia.org/wiki/Visa_policy_of_Kyrgyzstan>
+- EEC: <https://eec.eaeunion.org/comission/direction/dmi/digital_projects/144808/>
+- kaktus.media: resident card and PIN for foreigners: <https://kaktus.media/doc/526785_v_kyrgyzstane_vvedena_rezident_karta_dlia_inostrancev._oni_bydyt_polychat_pin.html>
+- kaktus.media, 25 Feb 2026: <https://kaktus.media/doc/541223_stydenty_iz_stran_eaes_prosiat_snizit_stoimost_polisa_oms._kommentariy_foms.html>
+- 24.kg: <https://24.kg/obschestvo/259386_vse_inostrannyie_studentyi_vkyirgyizstane_doljnyi_kupit_polis_oms/>
+- kaktus.media: Mandatory Health Insurance Fund: <https://kaktus.media/doc/476193_v_foms_poiasnili_kakaia_kategoriia_grajdan_obiazatelno_doljna_priobresti_strahovoy_polis.html>
+- kaktus.media: health insurance for students: <https://kaktus.media/doc/511464_chto_nyjno_znat_stydentam_ob_oformlenii_polisa_oms.html>
+- economist.kg, 6 Oct 2026: <https://economist.kg/society/2026/10/06/inostrannye-studenty-kolledzhi-2027.md>
+- UN Kyrgyzstan: <https://kyrgyzstan.un.org/en/node/35934>
+- prg.kz: <https://prg.kz/m/amp/document/31065611>
+- ITU, 2019 (PDF): <https://www.itu.int/en/ITU-D/Regional-Presence/Europe/Documents/Events/2019/Save%20lives%20Odessa/6-Асаналиев.pdf>
+- 24.kg EN, 17 Mar 2026: <https://24.kg/english/366271__Kyrgyzstan_to_launch_unified_emergency_response_service>
+- economist.kg, 16 Mar 2026: <https://economist.kg/society/2026/03/16/rossiiskaia-kompaniia-mozhiet-zapustit-v-kyrghyzstanie-iedinuiu-sluzhbu-112/>
+- 24.kg EN: mobile app: <https://24.kg/english/112570_Kyrgyzstan_develops_mobile_application_for_calls_to_emergency_services>
+- Current Time: <https://www.currenttime.tv/a/kyrgyzstan-tourism-police/29681356.html>
+- economist.kg, 6 May 2024: <https://economist.kg/novosti/2024/05/06/kakiie-uslughi-okazyvaiet-inostrantsam-turistichieskaia-militsiia-issyk-kulia-podrobnosti.md>
+- kaktus.media: safety tips for foreigners: <https://kaktus.media/doc/441060_na_slychay_melkih_nepriiatnostey._inostrancam_dali_sovety_po_bezopasnosti_v_kyrgyzstane.html>
+- kaktus.media: AQ.kg: <https://kaktus.media/doc/435210_v_bishkeke_prezentovali_mobilnoe_prilojenie_dlia_otslejivaniia_zagriaznennosti_vozdyha_aq.kg.html>
+- App Store: aq.kg: <https://apps.apple.com/ch/app/aq-kg-%D0%BA%D0%B0%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%BE-%D0%B2%D0%BE%D0%B7%D0%B4%D1%83%D1%85%D0%B0-%D0%B2-%D0%BA%D1%80/id1591412943>
+- 24.kg EN: mobile app: <https://24.kg/english/212499_Air_quality_in_Bishkek_can_be_monitored_through_mobile_app>
+- 24.kg EN: MoveGreen report: <https://24.kg/english/366706_Bishkek_residents_breathe_polluted_air_for_a_third_of_year_even_more_in_Osh/>
+- 24.kg RU: <https://24.kg/obschestvo/366645_novyiy_otchet_tret_goda_bishkekchane_dyishat_gryaznyim_vozduhom_voshe_esche_bolshe_/>
+- IQAir, 2 Dec 2025: <https://www.iqair.com/newsroom/december-2-2025-bishkek-among-top-10-most-polluted-cities-in-the-world>
+- IQAir, 23 Sep 2025: <https://www.iqair.com/us/newsroom/bishkek-among-top-10-most-polluted-cities-in-the-world-9-23-2025>
+- economist.kg, 24 Dec 2024: <https://economist.kg/novosti/2024/12/24/bishkiek-vozghlavil-rieitingh-ghorodov-s-samym-zaghriazniennym-vozdukhom-v-mirie/>
+- 24.kg: Bishkek ranked first: <https://24.kg/obschestvo/317883_bishkek_vyirvalsya_napervoe_mesto_pozagryazneniyu_vozduha_vmire/amp/>
+- 24.kg EN: IQAir 2025: <https://24.kg/english/368312__Kyrgyzstan_among_polluted_Central_Asian_countries__IQAir_report_>
+- RFE/RL: <https://www.rferl.org/a/kyrgyzstan-language-added-google/27560181.html>
+- Global Voices: <https://globalvoices.org/2016/02/19/kyrgyz-language-is-part-of-google-translate/>
+- Yandex support: <https://yandex.com/support/translate-mobile/ru/supported-langs>
+- KGMA: <https://kgma.kg/en/inostrannym-studentam/viza-i-registratsiya-inostrannykh-studentov>
+- Osh State University: international office: <https://iro.oshsu.kg/pages/page/276>
+- economist.kg, 28 Mar 2026: <https://economist.kg/society/2026/03/28/kyrghyzstan-izmienil-pravila-priebyvaniia-i-lieghalizatsii-dlia-inostrannykh-ghrazhdan/>
+- economist.kg, 18 Nov 2026: <https://economist.kg/society/2026/11/18/kyrgyzstan-bezviz-18-stran.md>
+- daryo.uz, 19 Nov 2026: <https://daryo.uz/en/2026/11/19/kyrgyzstan-proposes-visa-free-entry-for-18-additional-countries-and-longer-stays-for-foreign-visitors/>
+- economist.kg, 21 Sep 2026: <https://economist.kg/pravo-znat/2026/09/21/v-kyrgyzstane-izmenili-poriadok-registratsii-inostrannykh-grazhdan-chto-nuzhno-znat/>
+- economist.kg, 28 Sep 2026: <https://economist.kg/society/2026/09/28/minsotstruda-vnzh-registratsiya-inostrantsev.md>
+- 24.kg EN: <https://24.kg/en/article/389965>
+- kaktus.media, 26 Jun 2024: <https://kaktus.media/doc/504043_kak_inostrancam_zaregistrirovatsia_v_kyrgyzstane_onlayn_instrykciia_mcr.html>
+- kaktus.media, 2023: <https://kaktus.media/doc/484452_registraciia_inostrannyh_grajdan_v_kyrgyzstane_teper_vozmojna_onlayn.html>
+- kaktus.media: registration of foreigners, how-to: <https://kaktus.media/doc/393954_polezno._registraciia_inostrancev_kogda_gde_kak_skolko.html>
+- kaktus.media, 4 Sep 2024: <https://kaktus.media/doc/508603_registraciia_inostrancev_grajdan_rossii_toje_po_novym_pravilam._otvety_na_glavnye_voprosy.html>
+- kaktus.media, 24 Apr 2026: <https://kaktus.media/doc/545064_iz_za_chernyh_spiskov._v_kyrgyzstane_sozdali_centr_po_priemy_inostrannyh_stydentov.html>
+- kaktus.media: <https://kaktus.media/doc/509881_rektory_vyzov_nesyt_personalnyu_otvetstvennost_za_stydentov_inostrancev._ykaz_prezidenta.html>
+- AUCA, EduGate Applicant Guide: <https://auca.kg/uploads/Admission%20Sample%20Exams/EduGate_Applicant_Guide_EN_26.pdf>
+
+## Student numbers and onboarding barriers
+
+- Korea Times, 16 Aug 2023: <https://www.koreatimes.co.kr/amp/southkorea/politics/20230816/korea-aims-to-attract-300000-foreign-students-by-2027>
+- ICEF Monitor: <https://monitor.icef.com/?p=39755>
+- Korea Times, 24 Dec 2025: <https://www.koreatimes.co.kr/southkorea/k-universities/20251224/vietnam-replaces-china-as-largest-source-of-intl-students-at-korean-universities>
+- ICEF Monitor, Aug 2026: <https://monitor.icef.com/2026/08/after-years-of-growth-korea-faces-the-challenge-of-better-integrating-and-retaining-international-students/>
+- Asia Economy, Sep 2025: <https://www.asiae.co.kr/en/article/2025090310061899856>
+- Korea Herald: <https://www.koreaherald.com/article/10866638>
+- Korea JoongAng Daily: <https://www.koreajoongangdaily.com/korea/korea-shifts-international-student-focus-from-quantity-to-quality/12866018>
+- Korea Times, 10 Sep 2026: <https://www.koreatimes.co.kr/southkorea/20260910/international-students-in-korea-top-500000-for-1st-time-on-korean-cultural-boom>
+- Asia News Network: <https://asianews.network/south-korea-shifts-international-student-policy-from-numbers-to-quality/>
+- Korea JoongAng Daily: <https://www.koreajoongangdaily.com/korea/korean-universities-race-to-attract-international-students-but-fail-to-retain-them/12529877>
+- ICEF Monitor: <https://monitor.icef.com/?p=48616>
+- Asia News Network: <https://asianews.network/more-than-half-of-foreign-students-in-south-korea-lack-study-level-language-skills-under-weak-policy-oversight>
+- Korea Herald: <https://www.koreaherald.com/article/10579967>
+- Korea JoongAng Daily, 13 Jul 2026: <https://www.koreajoongangdaily.com/korea/delayed-graduations-visa-troubles-international-students-cite-university-support-failures/12771013>
+- Korea Times, 24 Sep 2026: <https://koreatimes.co.kr/southkorea/globalcommunity/20260924/global-students-choose-seoul-for-dynamic-opportunities-safety-despite-high-costs-competition>
+- Daum: <https://v.daum.net/v/20250914181142727>
+- Korea Times, 2018: <https://www.koreatimes.co.kr/southkorea/globalcommunity/20181204/47-of-snu-intl-students-do-not-understand-korean-lectures>
+- Korea Times, 15 Jul 2025: <https://www.koreatimes.co.kr/southkorea/education/20250715/beyond-numbers-support-gap-shadows-south-koreas-global-campus-push>
+- KIHASA: <https://www.kihasa.re.kr/api/kihasa/file/download?seq=19605>
+- KCUE PDF: <https://www.kcue.or.kr/_upload/news/2024/05/02/_5e0f0c4f88747480e2a85c7c924d5456.pdf>
+- KoreaScience: <https://koreascience.kr/article/JAKO202428443229204.pdf>
+- Akchabar: <https://www.akchabar.kg/en/news/bolee-20-tisyach-grazhdan-kirgizstana-obuchayutsya-za-granitsej-jgasvexjayehoghz>
+- Korea Times, 6 Nov 2026: <https://www.koreatimes.co.kr/foreignaffairs/20261106/kyrgyzstan-seeks-to-turn-korea-central-asia-summit-pledges-into-reality>
+- studyinkorea.go.kr: <https://www.studyinkorea.go.kr/ko/why/koreaStatistics.do>
+- Qazinform: <https://qazinform.com/news/over-28000-foreign-students-study-at-universities-in-kyrgyzstan-3cb5b0>
+- stat.gov.kg: <https://www.stat.gov.kg/en/opendata/category/5872/>
+- Akchabar: <https://www.akchabar.kg/en/news/v-kirgizstane-chislo-studentov-iz-indii-i-pakistana-snizilos-na-4-tisyachi-mmiybvpjeydtovue>
+- 24.kg: <https://24.kg/english/267821_71700_foreign_students_study_at_universities_in_Kyrgyzstan_/amp>
+- Erasmus+: <https://erasmus-networks.ec.europa.eu/book-page/country-page-kyrgyzstan>
+- 24.kg: <https://24.kg/english/294490__About_29000_foreign_students_study_in_Kyrgyzstan/amp/>
+- 24.kg: <https://24.kg/english/228582_Most_foreign_students_in_Kyrgyz_universities_are_citizens_of_Uzbekistan>
+- 24.kg, 17 Mar 2022: <https://24.kg/english/227845_77_percent_of_medical_students_in_Kyrgyzstan_are_foreigners>
+- Caspian Post: <https://caspianpost.com/kyrgyzstan/kyrgyzstan-attracts-thousands-of-medical-students-from-india-and-pakistan>
+- Jamestown: <https://jamestown.org/attacks-on-south-asian-students-and-workers-destabilize-kyrgyzstan/>
+- Dawn: <https://www.dawn.com/news/1834351>
+- RFE/RL via GlobalSecurity: <https://www.globalsecurity.org/military/library/news/2024/05/mil-240518-rferl03.htm>
+- Dawn: <https://www.dawn.com/news/1834250>
+- Times Higher Education: <https://timeshighereducation.com/cn/news/kyrgyzstan-leaders-reassure-pakistani-students-after-mob-attack>
+- Wikipedia: <https://en.wikipedia.org/wiki/2024_Bishkek_riots>
+- bne IntelliNews: <https://www.intellinews.com/pakistan-repatriates-180-citizens-after-mob-violence-in-bishkek-leaves-29-injured-325942/>
+- Al Jazeera: <https://www.aljazeera.com/news/2024/5/20/panic-in-bishkek-why-were-pakistani-students-attacked-in-kyrgyzstan>
+- VOA via GlobalSecurity: <https://www.globalsecurity.org/military/library/news/2024/05/mil-240523-voa08.htm>
+- bne IntelliNews: <https://intellinews.com/1-200-pakistani-students-at-kyrgyzstan-international-university-leave-country-after-mob-violence-shock-326103>
+- Global Voices: <https://globalvoices.org/2024/05/28/riots-against-foreign-students-in-kyrgystan-undermine-its-people-to-people-ties-with-south-asia/>
+- THE: <https://www.timeshighereducation.com/news/kyrgyzstan-leaders-reassure-pakistani-students-after-mob-attack>
+- 24.kg, 17 Oct 2025: <https://24.kg/english/347565_Foreign_students_leaving_Kyrgyzstan_Number_of_visas_drops_fourfold>
+- CESS 2025: <https://nomadit.co.uk/conference/cess2025/paper/91549>
+
+## Salymbekov University, HUSS and Korean partner universities
+
+- 4icu: <https://www.4icu.org/reviews/universities-other/18766.shtml>
+- salymbekov.com: <https://salymbekov.com>
+- uniRank: <https://www.unirank.org/kg/uni/salymbekov-university/>
+- Kaktus.media, 30 Jun 2026: <https://kaktus.media/doc/527184_gid_po_vyzam_bishkeka:_salymbekov_yniversitet.html>
+- International Department: <https://salymbekov.com/en/mezhdunarodnyj-otdel/>
+- International Faculty of Medicine: <https://salymbekov.com/en/mezhdunarodnyj-fakultet-mediciny/>
+- Salymbekov: academic mobility: <https://salymbekov.com/en/akademmobilnost/>
+- Salymbekov: dual degree with Lincoln University College: <https://salymbekov.com/en/programma-dvoinogo-diploma/>
+- Salymbekov: official recruitment agents (India, Pakistan, Uzbekistan): <https://salymbekov.com/en/india/>
+- Salymbekov: cooperation with universities (Inha MoU PDFs): <https://salymbekov.com/en/sotrudnichestvo-s-universitetami/>
+- Universities Page: <https://universitiespage.com/university/salymbekov-university>
+- Dhnews: <https://www.dhnews.co.kr/news/view/1065576894878571>
+- KPI News: <https://kpinews.kr/newsView/1065574474445881>
+- Dhnews: Pukyong: <https://www.dhnews.co.kr/news/view/1065573409551496>
+- INU Economics: HUSS curriculum document: <https://econ.inu.ac.kr/bbs/econ/331/365618/download.do>
+- FN News, Jun 2025: <https://www.fnnews.com/news/202506101109094331>
+- Segye Ilbo: <https://www.segye.com/newsView/20251202511856>
+- Dhnews: <https://www.dhnews.co.kr/news/view/1065582495035694>
+- Wikipedia: <https://en.wikipedia.org/wiki/Sogang_University>
+- Sogang history: <https://sogang.ac.kr/en/mission-and-history/history>
+- Before Arrival: <https://wwwe.sogang.ac.kr/wwwe/arrival.html>
+- Inbound: <https://inbound.sogang.ac.kr/inbound/1876/subview.do>
+- Wikipedia: <https://en.wikipedia.org/wiki/Daegu_University>
+- Edarabia: <https://www.edarabia.com/daegu-university-gyeongsan-south-korea>
+- Wikipedia: <https://en.wikipedia.org/wiki/Sangji_University>
+- Sangji PDF: <https://www.sangji.ac.kr/thumbnail/pdf/CMS_202508290136329541.pdf>
+- Wikipedia: <https://wikipedia.com/wiki/Incheon_University>
+- INU info 2015: <https://www.uma.es/media/files/2015_Incheon_National_University_information.pdf>
+- Wikipedia: <https://en.wikipedia.org/wiki/Inha_University>
+- Asia Economy, 2024: <https://www.asiae.co.kr/en/article/2024042418372966023>
+- Inha Student Handbook: <https://www.tha.de/Binaries/Binary78549/Inha-University-Student-Handbook.pdf>
+- LTC General Guide: <https://ltc.inha.ac.kr/sites/ltc/file/General%20Guide%20for%20International%20Students.pdf>
+- Dhnews: <https://dhnews.co.kr/news/view/179523748700432>
+- TISDC: <https://www.tisdc.org/en/partners/inha-technical-college/>
+
+## Competitors and existing services
+
+- Korea JoongAng Daily: <https://www.koreajoongangdaily.com/korea/study-in-korea-website-to-relaunch-with-enhanced-services/12282599>
+- Korea.net: <https://www.korea.net/NewsFocus/Society/view?articleId=290867>
+- MOFA: student support centre languages: <https://mofa.go.kr/eng/wpge/m_5719/contents.do>
+- foreignerhome.com: <https://foreignerhome.com/blog/en/essential-apps-foreigners-korea/>
+- Korea Times, 2017: <https://www.koreatimes.co.kr/southkorea/globalcommunity/20171018/immigration-service-reservations-now-just-clicks-away>
+- Goesan County: <https://goesan.go.kr/eng/contents.do?key=1335>
+- immigration.go.kr: <https://www.immigration.go.kr/immigration_eng/index>
+- Google Play: <https://play.google.com/store/apps/details?id=kr.liveinkorea.danuri&hl=en>
+- App Store: <https://apps.apple.com/us/app/%EB%8B%A4%EB%88%84%EB%A6%AC-danuri/id1086004885>
+- Trip.com: <https://sg.trip.com/guide/phone/travel-apps-for-south-korea.html>
+- Asia Economy: <https://www.asiae.co.kr/en/article/2024100711281495057>
+- Korea Times, 18 Aug 2025: <https://www.koreatimes.co.kr/southkorea/society/20250818/disjointed-system-fails-to-connect-intl-students-with-businesses>
+- lacha.co.kr, 2026: <https://lacha.co.kr/korea-guide/en/essential-apps-living-in-korea-2026/>
+- allo-korea: <https://allo-korea.com/en/essential-apps-korea-2025/>
+- LG U+ Korea SIM: <https://lguplus.com/korea-sim/eng/pc/support/blog/korea_travel_essential_apps_guide>
+- Klook: <https://www.klook.com/blog/best-korea-apps-for-travel>
+- annikim: <https://annikim.github.io/nuff_blog/CATEGORIES/KOREA/koreaapps.html>
+- Airalo: <https://www.airalo.com/blog/south-korea-travel-apps>
+- Culture Trip: <https://theculturetrip.com/asia/south-korea/articles/12-essential-apps-for-expats-living-in-seoul>
+- rexby: <https://www.rexby.com/RaarupAdventures/t/7-apps-to-download-before-korea-how-to-use-this-map-effortlessly>
+- Embassy of India in Bishkek, advisory 23 Jun 2026: <https://www.indembbishkek.gov.in/docs/1782288341ADVISORY-23.06.2026.pdf>
+- KGMA international applicants: <https://kgma.kg/en/entrant/international-applicants>
+- 24.kg: <https://24.kg/en/article/kyrgyzstan-to-register-intermediaries-recruiting-foreign-students>
+- 24.kg: <https://24.kg/en/article/388742>
+- 29 Apr 2026: <https://indembbishkek.gov.in/docs/1777460393ADVISORY-29.04.2026.pdf>
+- 13 Jul 2026: <https://indembbishkek.gov.in/docs/1783943148ADVISORY-13.07.2026.pdf>
+- Embassy of India in Bishkek: page for students: <https://indembbishkek.gov.in/page.php?pageid=137>
+- Collegedunia: <https://collegedunia.com/kyrgyzstan>
+- Careers360: <https://studyabroad.careers360.com/articles/kyrgyzstan-mbbs-fees-2026>
+- PW: <https://www.pw.live/study-abroad/exams/mbbs-in-kyrgyzstan>
+- Telangana Today: <https://telanganatoday.com/kyrgyzstan-beckons-medicos-student-friendly-country-is-emerging-as-academic-hotspot>
+- studyabroad.state.gov: <https://studyabroad.state.gov/sites/default/files/field_country_fact/kyrgyzstan.pdf>
+
+## Korean UX, accessibility and capstone criteria
+
+- Yozm Wishket: <https://yozm.wishket.com/magazine/detail/1942>
+- MOGEF: <https://www.mogef.go.kr/html/popup/Web_access.html>
+- Seoul: <https://www.seoul.go.kr/helper/web_accessibility.do>
+- sisul.or.kr: <https://sisul.or.kr/open_content/main/guidance/wa.jsp>
+- culture.go.kr: <https://www.culture.go.kr/localperform/main/contents.do?menuNo=400029>
+- MCST: <https://www.mcst.go.kr/kor/s_etc/webAccess/accessibility.jsp>
+- W3C WAI: <https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/>
+- toss.tech: <https://toss.tech/article/8-writing-principles-of-toss>
+- Byline Network: <https://byline.network/2022/06/08-88>
+- Toss Feed: UX writer interview: <https://toss.im/tossfeed/article/uxwriter-interview>
+- Toss Feed: 왜 단순함에 집착할까: <https://toss.im/tossfeed/article/importance-simplicity>
+- Toss product principles: <https://toss.im/tossfeed/article/tossproductprinciples>
+- daleseo.com: <https://daleseo.com/css-text-wrap/>
+- apple.com/kr CSS: <https://www.apple.com/kr/app-store/styles/main.built.css>
+- Krafton brand: <https://brand.krafton.com/Typograhpy>
+- w3c/csswg-drafts #4285: <https://github.com/w3c/csswg-drafts/issues/4285>
+- Fontsource: <https://fontsource.org/fonts/pretendard/about>
+- Pretendard README: <https://cdn.jsdelivr.net/npm/pretendard@1.3.9/docs/en/README.md>
+- Adobe Fonts: <https://fonts.adobe.com/fonts/pretendard>
+- Edaily, 13 Jul 2026: <https://en.edaily.co.kr/news/eda202607135782/>
+- Mobile World Live: <https://www.mobileworldlive.com/asia-pacific/smartphone-adoption-by-older-koreans-surges/>
+- Kakao IR: <https://www.kakaocorp.com/page/detail/11670?lang=ENG>
+- Korea Herald: <https://www.koreaherald.com/article/10926835>
+- sci-tech-today: <https://www.sci-tech-today.com/?p=18280>
+- Capstone Design A syllabus 2021-1: <https://faculty-hieonn.github.io/files/2021-1_강의계획안서식%28국문%29_학부_캡스톤디자인A_210225.pdf>
+- Capstone Design A syllabus 2021-2: <https://faculty-hieonn.github.io/files/2021-2_강의계획안서식%28국문%29_학부_캡스톤디자인A_210601.pdf>
+- Chosun Guide Book 04: <https://contents3.chosun.ac.kr/2020/lms/down/guide_book/Guide_Book_04.pdf>
+- KoreaScience: <https://koreascience.kr/article/JAKO201127250032186.pub?lang=ko>
+- KoreaScience: Fair Assessment: <https://koreascience.kr/article/JAKO201910537995440.page>
+- SYU blog: <https://www.syu.ac.kr/blog/%EB%8C%80%ED%95%99%ED%98%81%EC%8B%A0%EC%A7%80%EC%9B%90%EC%82%AC%EC%97%852023-1%ED%95%99%EA%B8%B0-%EC%BA%A1%EC%8A%A4%ED%86%A4%EB%94%94%EC%9E%90%EC%9D%B8-%EA%B5%90%EA%B3%BC%EB%AA%A9-%EC%95%88%EB%82%B4-2>
